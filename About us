@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Eco Mart</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #e2ebe2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #547a54;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #c8e6c9;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #649164;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a5d6a7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(84, 122, 84, 0.85), rgba(76, 175, 80, 0.9)), url('https://i.pinimg.com/1200x/e4/98/0a/e4980a532661492832a45fb9ff75af68.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 10px;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: #2d5a3c;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .mission p {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto 10px;
+        }
+
+        /* Team Section */
+        .team-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-header h2 {
+            color: #2d5a3c;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .member-header {
+            background-color: #4a7c59;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .member-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-name {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .member-content {
+            padding: 25px;
+        }
+
+        .skills-section, .education-section, .experience-section, .responsibilities-section, .certifications-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #2d5a3c;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e0f2e1;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #e8f5e9;
+            color: #1b5e20;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .education-item, .experience-item, .responsibility-item {
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .item-details {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .certifications {
+            font-size: 0.95rem;
+            color: #2d5a3c;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e4027;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #a5d6a7;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #c8e6c9;
+        }
+
+        .footer-section i {
+            margin-right: 10px;
+        }
+
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid #2d5a3c;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-content {
+                padding: 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Eco Mart</div>
+            <p class="tagline">Save our planet</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="about.html" style="color: #a5d6a7;">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Meet Our Team</h1>
+            <p>Learn sustainability with us</p>
+            <p>and</p>
+            <p>Teach others</p>
+        </section>
+
+        <!-- Mission Statement -->
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>Educate about sustainability</p>
+            <p>Let's Save Planet together</p>
+        </section>
+
+        <!-- Team Section -->
+        <div class="team-header">
+            <h2>The Eco Mart Team</h2>
+            <p>Get to know the people behind our eco-friendly mission</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                    </div>
+                    <h3 class="member-name">Keschella Parajuli</h3>
+                    <p class="member-role">Team Leader</p>
+                </div>
+                <div class="member-content">
+                    <div class="skills-section">
+                        <div class="section-title"><i class="fas fa-code"></i> Build Login Page</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="education-section">
+                        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                        <div class="education-item">
+                            <div class="item-title">BSc Computing</div>
+                            <div class="item-details">Islington College, London Met University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                    </div>
+                    <h3 class="member-name">Ramit Chaudhary</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-content">
+                    <div class="skills-section">
+                        <div class="section-title"><i class="fas fa-code"></i> Build Home Page</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="education-section">
+                        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                        <div class="education-item">
+                            <div class="item-title">BSc Computing</div>
+                            <div class="item-details">Islington College, London Met University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                    </div>
+                    <h3 class="member-name">Devendra Kandel</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-content">
+                    <div class="skills-section">
+                        <div class="section-title"><i class="fas fa-code"></i> Build Product Page</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="education-section">
+                        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                        <div class="education-item">
+                            <div class="item-title">BSc Computing</div>
+                            <div class="item-details">Islington College, London Met University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                    </div>
+                    <h3 class="member-name">Jenish Shrestha</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-content">
+                    <div class="skills-section">
+                        <div class="section-title"><i class="fas fa-code"></i> Build Contact Page</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="education-section">
+                        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                        <div class="education-item">
+                            <div class="item-title">BSc Computing</div>
+                            <div class="item-details">Islington College, London Met University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                    </div>
+                    <h3 class="member-name">Pranisha Bhuju</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-content">
+                    <div class="skills-section">
+                        <div class="section-title"><i class="fas fa-code"></i> Build About Us</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            
+                        </div>
+                    </div>
+                   
+                    <div class="education-section">
+                        <div class="section-title"> Education</div>
+                        <div class="education-item">
+                            <div class="item-title">BSc Computing</div>
+                            <div class="item-details">Islington College, London Met University</div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eco Mart</h3>
+                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> ecomartnp.com</p>
+                    <p><i class="fas fa-phone"></i> 011-98646</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Eco Mart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for team cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const teamCards = document.querySelectorAll('.team-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            teamCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
