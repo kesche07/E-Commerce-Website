@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Help and Support</title>
+    </head>
+    <body>
+        <nav>
+            <table width="10%" border="1px">
+                <tr >
+                    <td><a href="#">Home</a></td>
+                    <td><a href="#">Product Page</a></td>
+                    <td><a href="login.html">Login</a></td>
+                    <td><a href="#">About</a></td>
+                    <td><a href="#">Contact Us</a></td>
+                    <td><a href="#">Help and Support</a></td>   
+                </tr>
+            </table>
+        </nav>
+        <fieldset>
+            <h1>How can we help?</h1>
+            <form>
+                Enter your issue:
+                <select id="Issue" onchange="issue()">
+                    <option value="login">Login Issues</option>
+                    <option value="payment">Payment issues</option>
+                    <option value="seller">Report a Seller</option>
+                    <option value="return">Return or Exchange a product</option>
+                    <option value="bug">Report in-app bug</option>
+                    <option value="other">Other bugs</option>
+                </select><br>
+                
+                <p id="result"></p>
+                <!-- Hidden message box -->
+    <div id="otherBox" style="display:none;">
+    <label for="message">Please describe your issue:</label><br>
+    <textarea id="message" rows="5" cols="40"
+    placeholder="Type your message here..."></textarea>
+    </div>
+            </form>
+        </fieldset>
+
+        
+
+
+
+
+        <script>
+            function issue(){
+                const i = document.getElementById("Issue").value;
+                const box = document.getElementById("otherBox");
+
+                if (i==="seller"){
+                    document.getElementById('')
+                }
+                else if(i==="return"){
+
+                }
+                else if(i==="bug"){
+
+                }
+                else{
+                    box.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>
