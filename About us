@@ -4,111 +4,423 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Eco Mart</title>
-   
     <style>
-        /* General Reset */
+        /* Base Styles */
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #f9f9f9;
+            background-color: #e2ebe2;
             color: #333;
             line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0px auto;
             padding: 20px;
         }
 
-        /* Links */
-        a {
-            color: #0077cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Headers */
-        h1 {
+        /* Header */
+        header {
+            background-color: #547a54;
+            color: white;
+            padding: 20px 0px;
             text-align: center;
-            color: #222;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #444;
-            margin: 15px 0 10px;
-        }
-        h3 {
-            color: #555;
-            margin: 10px 0;
         }
 
-        /* Sections */
-        section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Paragraphs */
-        p {
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
             margin-bottom: 10px;
         }
 
-        /* Figures & Images */
-        figure {
-            text-align: center;
-            margin: 20px 0;
-        }
-        figure img {
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        figcaption {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
         }
 
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        /* Navigation */
+        nav {
+            background-color: #649164;
+            padding: 15px 0px;
         }
-        table th, table td {
-            border: 1px solid #ccc;
-            padding: 12px;
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0px 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            color: #a5d6a7;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #a5d6a7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45, 90, 60, 0.85), rgba(30, 64, 39, 0.9)), url('https://i.pinimg.com/1200x/e4/98/0a/e4980a532661492832a45fb9ff75af68.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0px auto;
+            line-height: 1.8;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
             text-align: center;
         }
-        table th {
-            background-color: #0077cc;
-            color: #fff;
+
+        .mission h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
+
+        .mission p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Team Section */
+        .team-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-header h2 {
+            color: #2e7d32;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            color: #666;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0px auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .member-header {
+            background-color: #4a7c59;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .member-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0px auto 15px;
+            overflow: hidden;
+            background-color: #e0f2e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-photo i {
+            font-size: 70px;
+            color: #4a7c59;
+        }
+
+        .member-name {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            background-color: white;
+            color: #4a7c59;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .portfolio-link:hover {
+            background-color: #e0f2e0;
+            transform: scale(1.05);
+        }
+
+        .member-content {
+            padding: 25px;
+        }
+
+        .skills-section, .education-section, .experience-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #2e7d32;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .education-item:before, .experience-item:before {
+            content: "•";
+            color: #4a7c59;
+            position: absolute;
+            left: 0px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .item-details {
+            color: #666;
+            font-size: 14px;
         }
 
         /* Footer */
         footer {
-            background: #0077cc;
-            color: #fff;
+            background-color: #1e4027;
+            color: white;
+            padding: 40px 0px;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            border-radius: 6px;
         }
-        footer h2 {
-            color: #fff;
-            margin-bottom: 5px;
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0px auto 30px;
         }
-        footer p {
-            font-size: 0.9em;
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #a5d6a7;
+            font-size: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #c8e6c9;
+            text-decoration: underline;
+        }
+
+        .footer-section i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Portfolio Modal */
+        .portfolio-modal {
+            display: none;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .portfolio-content {
+            background-color: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-header h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-header p {
+            color: #666;
+        }
+
+        .portfolio-section {
+            margin-bottom: 25px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0px;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-section {
+                text-align: center;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -129,9 +441,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="file:///D:/infos%20html/abs/about%20who.html">Log In</a></li>
-                <li><a href="about.html" style="color: #a5d6a7;">About Us</a></li>
-                <li><a href="file:///D:/infos%20html/abs/contact.html">Contact</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -141,16 +453,14 @@
         <!-- Hero Section -->
         <section class="hero">
             <h1>Meet Our Team</h1>
-            <p>Learn sustainability with us</p>
-            <p>and</p>
-            <p>Teach others</p>
+            <p>Learn sustainability with us and teach others how to make eco-friendly choices every day.</p>
         </section>
 
         <!-- Mission Statement -->
         <section class="mission">
             <h2>Our Mission</h2>
-            <p>Educate about sustainability</p>
-            <p>Let's Save Planet together</p>
+            <p>Educate about sustainability and promote eco-friendly living practices.</p>
+            <p>Let's save our planet together for future generations.</p>
         </section>
 
         <!-- Team Section -->
@@ -164,24 +474,36 @@
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
-                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <h3 class="member-name">Keschella Parajuli</h3>
-                    <p class="member-role">Team Leader</p>
+                    <p class="member-role">Team Leader & Frontend Developer</p>
+                    <a href="#portfolio1" class="portfolio-link" onclick="openPortfolio(1)">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </a>
                 </div>
                 <div class="member-content">
                     <div class="skills-section">
-                        <div class="section-title"><i class="fas fa-code"></i> Build Login Page</div>
+                        <div class="section-title"><i class="fas fa-code"></i> Responsibilities</div>
                         <div class="skills-list">
+                            <span class="skill-tag">Build Login Page</span>
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Project Management</span>
                         </div>
                     </div>
                     <div class="education-section">
                         <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
                         <div class="education-item">
                             <div class="item-title">BSc Computing</div>
-                            <div class="item-details">Islington College, London Met University</div>
+                            <div class="item-details">Islington College, London Metropolitan University</div>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+                        <div class="experience-item">
+                            <div class="item-title">Web Development Team Lead</div>
+                            <div class="item-details">Eco Mart Project (2025-Present)</div>
                         </div>
                     </div>
                 </div>
@@ -191,24 +513,36 @@
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
-                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <h3 class="member-name">Ramit Chaudhary</h3>
-                    <p class="member-role">Team Member</p>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio2" class="portfolio-link" onclick="openPortfolio(2)">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </a>
                 </div>
                 <div class="member-content">
                     <div class="skills-section">
-                        <div class="section-title"><i class="fas fa-code"></i> Build Home Page</div>
+                        <div class="section-title"><i class="fas fa-code"></i> Responsibilities</div>
                         <div class="skills-list">
+                            <span class="skill-tag">Build Home Page</span>
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive Design</span>
                         </div>
                     </div>
                     <div class="education-section">
                         <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
                         <div class="education-item">
                             <div class="item-title">BSc Computing</div>
-                            <div class="item-details">Islington College, London Met University</div>
+                            <div class="item-details">Islington College, London Metropolitan University</div>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+                        <div class="experience-item">
+                            <div class="item-title">UI/UX Development</div>
+                            <div class="item-details">Eco Mart Homepage (2025)</div>
                         </div>
                     </div>
                 </div>
@@ -218,24 +552,36 @@
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
-                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <h3 class="member-name">Devendra Kandel</h3>
-                    <p class="member-role">Team Member</p>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio3" class="portfolio-link" onclick="openPortfolio(3)">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </a>
                 </div>
                 <div class="member-content">
                     <div class="skills-section">
-                        <div class="section-title"><i class="fas fa-code"></i> Build Product Page</div>
+                        <div class="section-title"><i class="fas fa-code"></i> Responsibilities</div>
                         <div class="skills-list">
+                            <span class="skill-tag">Build Product Page</span>
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">E-commerce Design</span>
                         </div>
                     </div>
                     <div class="education-section">
                         <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
                         <div class="education-item">
                             <div class="item-title">BSc Computing</div>
-                            <div class="item-details">Islington College, London Met University</div>
+                            <div class="item-details">Islington College, London Metropolitan University</div>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+                        <div class="experience-item">
+                            <div class="item-title">Product Page Developer</div>
+                            <div class="item-details">Eco Mart Products Section (2025)</div>
                         </div>
                     </div>
                 </div>
@@ -245,24 +591,36 @@
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
-                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <h3 class="member-name">Jenish Shrestha</h3>
-                    <p class="member-role">Team Member</p>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio4" class="portfolio-link" onclick="openPortfolio(4)">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </a>
                 </div>
                 <div class="member-content">
                     <div class="skills-section">
-                        <div class="section-title"><i class="fas fa-code"></i> Build Contact Page</div>
+                        <div class="section-title"><i class="fas fa-code"></i> Responsibilities</div>
                         <div class="skills-list">
+                            <span class="skill-tag">Build Contact Page</span>
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Form Validation</span>
                         </div>
                     </div>
                     <div class="education-section">
                         <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
                         <div class="education-item">
                             <div class="item-title">BSc Computing</div>
-                            <div class="item-details">Islington College, London Met University</div>
+                            <div class="item-details">Islington College, London Metropolitan University</div>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+                        <div class="experience-item">
+                            <div class="item-title">Contact System Developer</div>
+                            <div class="item-details">Eco Mart Contact Forms (2025)</div>
                         </div>
                     </div>
                 </div>
@@ -272,29 +630,49 @@
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
-                        <i class="fas fa-user" style="font-size: 70px; line-height: 130px; color: #bbb;"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <h3 class="member-name">Pranisha Bhuju</h3>
-                    <p class="member-role">Team Member</p>
+                    <p class="member-role">Backend Developer</p>
+                    <a href="#portfolio5" class="portfolio-link" onclick="openPortfolio(5)">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </a>
                 </div>
                 <div class="member-content">
                     <div class="skills-section">
-                        <div class="section-title"><i class="fas fa-code"></i> Build About Us</div>
+                        <div class="section-title"><i class="fas fa-code"></i> Responsibilities</div>
                         <div class="skills-list">
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            
+                            <span class="skill-tag">Build Research Page</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Database Design</span>
+                            <span class="skill-tag">API Integration</span>
                         </div>
                     </div>
-                   
                     <div class="education-section">
-                        <div class="section-title"> Education</div>
+                        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
                         <div class="education-item">
                             <div class="item-title">BSc Computing</div>
-                            <div class="item-details">Islington College, London Met University</div>
+                            <div class="item-details">Islington College, London Metropolitan University</div>
                         </div>
                     </div>
-                    
+                    <div class="experience-section">
+                        <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+                        <div class="experience-item">
+                            <div class="item-title">Backend Systems Developer</div>
+                            <div class="item-details">Eco Mart Research Section (2025)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="portfolio-modal">
+        <div class="portfolio-content">
+            <span class="close-modal" onclick="closePortfolio()">&times;</span>
+            <div id="portfolioContent">
+                <!-- Portfolio content will be inserted here by JavaScript -->
             </div>
         </div>
     </div>
@@ -316,18 +694,204 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> ecomartnp.com</p>
+                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
                     <p><i class="fas fa-phone"></i> 011-98646</p>
                     <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy 2026 Eco Mart. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Portfolio data for each team member
+        const portfolioData = [
+            {
+                name: "Keschella Parajuli",
+                role: "Team Leader & Frontend Developer",
+                bio: "Passionate web developer with expertise in creating user-friendly interfaces and leading development teams. Specializes in sustainable web design.",
+                fullSkills: ["HTML5", "CSS3", "JavaScript", "React", "Git", "Project Management", "Team Leadership"],
+                education: [
+                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
+                    { title: "Web Development Certification", details: "Code Academy (2024)", grade: "Distinction" }
+                ],
+                experience: [
+                    { title: "Web Development Team Lead", details: "Eco Mart Project (2025-Present)", description: "Led a team of 5 developers to create a sustainable e-commerce platform" },
+                    { title: "Frontend Developer Intern", details: "Tech Solutions Nepal (2024)", description: "Developed responsive web applications for various clients" }
+                ],
+                projects: [
+                    { name: "Eco Mart Login System", description: "Created secure and accessible login system with form validation" },
+                    { name: "Sustainable E-commerce Platform", description: "Led development of complete eco-friendly shopping platform" }
+                ],
+                certifications: ["Google UX Design Certificate", "Project Management Professional (PMP)", "WCAG 2.1 Accessibility"]
+            },
+            {
+                name: "Ramit Chaudhary",
+                role: "Frontend Developer",
+                bio: "Creative frontend developer specializing in responsive design and user experience optimization.",
+                fullSkills: ["HTML5", "CSS3", "JavaScript", "Vue.js", "Bootstrap", "Responsive Design", "UI/UX"],
+                education: [
+                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
+                    { title: "UI/UX Design Specialization", details: "Coursera (2024)", grade: "Completed" }
+                ],
+                experience: [
+                    { title: "Frontend Developer", details: "Eco Mart Homepage (2025)", description: "Designed and implemented responsive homepage with modern CSS techniques" },
+                    { title: "Web Design Freelancer", details: "Self-employed (2023-2024)", description: "Created websites for local businesses focusing on mobile-first design" }
+                ],
+                projects: [
+                    { name: "Eco Mart Homepage", description: "Developed responsive homepage with interactive elements" },
+                    { name: "Mobile-First Portfolio Template", description: "Created reusable portfolio template for developers" }
+                ],
+                certifications: ["Responsive Web Design Certification", "JavaScript Algorithms Certification"]
+            },
+            {
+                name: "Devendra Kandel",
+                role: "Frontend Developer",
+                bio: "E-commerce specialist with focus on product presentation and shopping experience optimization.",
+                fullSkills: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "E-commerce", "Payment Integration"],
+                education: [
+                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "Upper Second Class" },
+                    { title: "E-commerce Development", details: "Udemy (2024)", grade: "Completed" }
+                ],
+                experience: [
+                    { title: "Product Page Developer", details: "Eco Mart Products Section (2025)", description: "Created dynamic product pages with filtering and sorting capabilities" },
+                    { title: "E-commerce Assistant", details: "Online Store (2023-2024)", description: "Managed product listings and customer interface" }
+                ],
+                projects: [
+                    { name: "Eco Mart Product Catalog", description: "Built comprehensive product browsing system" },
+                    { name: "Shopping Cart System", description: "Implemented cart functionality with local storage" }
+                ],
+                certifications: ["E-commerce Development Certificate", "PHP & MySQL Certification"]
+            },
+            {
+                name: "Jenish Shrestha",
+                role: "Frontend Developer",
+                bio: "Specialist in form design and validation with focus on user interaction and data collection.",
+                fullSkills: ["HTML5", "CSS3", "JavaScript", "Form Validation", "AJAX", "jQuery", "Bootstrap"],
+                education: [
+                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
+                    { title: "JavaScript Mastery", details: "Frontend Masters (2024)", grade: "Completed" }
+                ],
+                experience: [
+                    { title: "Contact System Developer", details: "Eco Mart Contact Forms (2025)", description: "Created multiple contact forms with validation and submission handling" },
+                    { title: "Web Form Specialist", details: "Data Collection Project (2024)", description: "Developed complex forms for data gathering" }
+                ],
+                projects: [
+                    { name: "Eco Mart Contact System", description: "Built complete contact management system" },
+                    { name: "Multi-Step Form Wizard", description: "Created wizard-style form for complex data entry" }
+                ],
+                certifications: ["JavaScript Form Validation", "Bootstrap Framework Certification"]
+            },
+            {
+                name: "Saurav Dahal",
+                role: "Backend Developer",
+                bio: "Backend specialist focusing on server-side logic, database design, and API development.",
+                fullSkills: ["Node.js", "Express", "MongoDB", "REST API", "Database Design", "Authentication", "Security"],
+                education: [
+                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
+                    { title: "Backend Development", details: "FreeCodeCamp (2024)", grade: "Certified" }
+                ],
+                experience: [
+                    { title: "Backend Systems Developer", details: "Eco Mart Research Section (2025)", description: "Built research data management system with API endpoints" },
+                    { title: "Database Administrator", details: "Student Project (2024)", description: "Designed and implemented database systems for academic projects" }
+                ],
+                projects: [
+                    { name: "Eco Mart Research API", description: "Developed REST API for research data management" },
+                    { name: "User Authentication System", description: "Created secure login and registration system" }
+                ],
+                certifications: ["Node.js Developer Certificate", "MongoDB Certification", "API Development"]
+            }
+        ];
+
+        // Open portfolio modal
+        function openPortfolio(memberId) {
+            const member = portfolioData[memberId - 1];
+            const modal = document.getElementById('portfolioModal');
+            const content = document.getElementById('portfolioContent');
+            
+            // Build portfolio content
+            content.innerHTML = `
+                <div class="portfolio-header">
+                    <h2>${member.name}</h2>
+                    <p>${member.role}</p>
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">About Me</h3>
+                    <p>${member.bio}</p>
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Skills & Expertise</h3>
+                    <div class="skills-list">
+                        ${member.fullSkills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Education</h3>
+                    ${member.education.map(edu => `
+                        <div class="education-item" style="margin-bottom: 15px;">
+                            <div class="item-title">${edu.title}</div>
+                            <div class="item-details">${edu.details}</div>
+                            <div style="color: #4a7c59; font-weight: bold;">${edu.grade}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Experience</h3>
+                    ${member.experience.map(exp => `
+                        <div class="experience-item" style="margin-bottom: 15px;">
+                            <div class="item-title">${exp.title}</div>
+                            <div class="item-details">${exp.details}</div>
+                            <p style="color: #666; margin-top: 5px;">${exp.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Projects</h3>
+                    ${member.projects.map(project => `
+                        <div style="margin-bottom: 15px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                            <div style="font-weight: bold; color: #333;">${project.name}</div>
+                            <div style="color: #666;">${project.description}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="portfolio-section">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Certifications</h3>
+                    <div class="skills-list">
+                        ${member.certifications.map(cert => `<span class="skill-tag">${cert}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button onclick="closePortfolio()" style="background-color: #4a7c59; color: white; border: none; padding: 10px 30px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        Close Portfolio
+                    </button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Close portfolio modal
+        function closePortfolio() {
+            document.getElementById('portfolioModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('portfolioModal');
+            if (event.target === modal) {
+                closePortfolio();
+            }
+        }
+
         // Simple animation for team cards on scroll
         document.addEventListener('DOMContentLoaded', function() {
             const teamCards = document.querySelectorAll('.team-card');
@@ -336,7 +900,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.transform = 'translateY(0px)';
                     }
                 });
             }, { threshold: 0.1 });
