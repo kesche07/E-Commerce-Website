@@ -1,25 +1,42 @@
 <html>
     <head>
         <title>Help and Support</title>
+        <style>
+            .container{
+                height:50%;
+                width: 20%;
+                margin:5%;
+                padding:30px;
+            
+                position: absolute;
+                top: 40%;
+                left: 45%;
+                transform: translate(-50%, -50%); 
+            }
+        </style>
     </head>
     <body>
-        <nav>
-            <table width="10%" border="1px">
-                <tr >
-                    <td><a href="#">Home</a></td>
-                    <td><a href="#">Product Page</a></td>
-                    <td><a href="login.html">Login</a></td>
-                    <td><a href="#">About</a></td>
-                    <td><a href="#">Contact Us</a></td>
-                    <td><a href="#">Help and Support</a></td>   
-                </tr>
-            </table>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>|
+                    <li><a href="#">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="#">Products</a></li>|
+                    <li><a href="#">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="#">Login</a></li>
+                </ul>
         </nav>
-        <fieldset>
+        <section class="container">
             <h1>How can we help?</h1>
             <form>
                 Enter your issue:
                 <select id="Issue" onchange="issue()">
+                    <option value="">-- Select --</option>
                     <option value="login">Login Issues</option>
                     <option value="payment">Payment issues</option>
                     <option value="seller">Report a Seller</option>
@@ -27,22 +44,25 @@
                     <option value="bug">Report in-app bug</option>
                     <option value="other">Other bugs</option>
                 </select><br>
+
                 
+
+                <!--not visible unless 'other' option is selected-->
                 <p id="result"></p>
+                
                 <!-- Hidden message box -->
-    <div id="otherBox" style="display:none;">
-    <label for="message">Please describe your issue:</label><br>
-    <textarea id="message" rows="5" cols="40"
-    placeholder="Type your message here..."></textarea>
-    </div>
+                <div id="otherBox" style="display:none;">
+                    <label for="message">Please describe your issue:</label><br>
+                    <textarea id="message" rows="5" cols="40"
+                    placeholder="Type your message here..."></textarea>
+                </div>
             </form>
-        </fieldset>
-
-        
-
-
-
-
+        </section>
+        <footer>
+            <hr>
+            <p>&copy website name 2026 </p>
+        </footer>
+        <!--js-->
         <script>
             function issue(){
                 const i = document.getElementById("Issue").value;
@@ -59,6 +79,7 @@
                 }
                 else{
                     box.style.display = "block";
+                    
                 }
             }
         </script>
