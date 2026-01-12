@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<style>
+  .navbar {
+  display: flex;
+  justify-content: space-around; /* evenly spaced links */
+  align-items: center;           /* vertically aligned */
+  background-color: #c2d9d9;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.products {
+  display: flex;             /* arrange boxes side by side */
+  overflow-x: auto;          /* enable horizontal scroll */
+  gap: 20px;                 /* space between boxes */
+  padding: 20px;
+  scroll-behavior: smooth;   /* smooth scrolling */
+}
+
+.Product {
+  flex: 0 0 auto;            /* keep fixed width, don’t shrink */
+  width: 300px;
+  background-color: #f9f9f9;
+  border: 2px solid #007777;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.Product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;         /* crop image nicely */
+  border-radius: 8px;
+}
+
+</style>
+
+
+</head>
+<body>
+    <link rel="stylesheet" href="../CSS/style.css"> 
+   <nav class="navbar">
+  <div class="logo"><img src="logo.png" alt="Logo"></div>
+  <div class="menu"><a href="index.html">Home</a></div>
+  <div class="menu"><a href="blog.html">Blog</a></div>
+  <div class="menu"><a href="products.html">Products</a></div>
+  <div class="menu"><a href="contact.html">Contact</a></div>
+  <div class="menu"><a href="support.html">Help & Support</a></div>
+  <div class="menu"><a href="login.html">Login</a></div>
+</nav>
+
+    
+    <h1 style="text-align: center;"> Our Top selling products</h1>
+    <section class="products">
+  <div class="Product">
+     <img class="image" src="Asset/product1.jpg" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>$29.99</p>
+  </div>
+
+  <div class="Product">
+    <img class="image" src="Asset/product2.jpg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$49.99</p>
+  </div>
+
+  <div class="Product">
+    <img src="Asset/product3.jpg" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>$19.99</p>
+  </div>
+
+  <div class="Product">
+    <img class="image" src="Asset/product4.jpg" alt="Product 4">
+    <h3>Product 4</h3>
+    <p>$39.99</p>
+
+    <div class="Product">
+    <img class="image" src="Asset/product5.jpg" alt="Product 4">
+    <h3>Product 5</h3>
+    <p>$39.99</p>
+
+    <div class="Product">
+    <img  src="Asset/product6.jpg" alt="Product 4">
+    <h3>Product 6</h3>
+    <p>$39.99</p>
+  </div>
+</section>
+
+</body>
+</html>
