@@ -14,8 +14,8 @@
         }
 
         body {
-            background-color: #e2ebe2;
-            color: #333;
+            background-color: #d5f3dc;
+            color: #191818;
             line-height: 1.6;
         }
 
@@ -172,7 +172,7 @@
             color: white;
             padding: 25px;
             text-align: center;
-            position: relative;
+           
         }
 
         .member-photo {
@@ -181,7 +181,7 @@
             border-radius: 50%;
             border: 5px solid white;
             margin: 0px auto 15px;
-            overflow: hidden;
+           
             background-color: #e0f2e0;
             display: flex;
             align-items: center;
@@ -244,7 +244,7 @@
 
         .skills-list {
             display: flex;
-            flex-wrap: wrap;
+           
             gap: 8px;
         }
 
@@ -260,13 +260,13 @@
         .education-item, .experience-item {
             margin-bottom: 10px;
             padding-left: 20px;
-            position: relative;
+          
         }
 
         .education-item:before, .experience-item:before {
             content: "•";
             color: #4a7c59;
-            position: absolute;
+           
             left: 0px;
         }
 
@@ -291,7 +291,7 @@
 
         .footer-content {
             display: flex;
-            flex-wrap: wrap;
+          
             justify-content: space-around;
             max-width: 1200px;
             margin: 0px auto 30px;
@@ -356,21 +356,10 @@
             overflow-y: auto;
             border-radius: 10px;
             padding: 30px;
-            position: relative;
+          
         }
 
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .close-modal:hover {
-            color: #333;
-        }
+     
 
         .portfolio-header {
             text-align: center;
@@ -423,7 +412,7 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://github.com/kesche07/E-Commerce-Website/blob/main/Asset/logo.png?raw=true">
 </head>
 <body>
     <!-- Header -->
@@ -705,213 +694,5 @@
         </div>
     </footer>
 
-    <script>
-        // Portfolio data for each team member
-        const portfolioData = [
-            {
-                name: "Keschella Parajuli",
-                role: "Team Leader & Frontend Developer",
-                bio: "Passionate web developer with expertise in creating user-friendly interfaces and leading development teams. Specializes in sustainable web design.",
-                fullSkills: ["HTML5", "CSS3", "JavaScript", "React", "Git", "Project Management", "Team Leadership"],
-                education: [
-                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
-                    { title: "Web Development Certification", details: "Code Academy (2024)", grade: "Distinction" }
-                ],
-                experience: [
-                    { title: "Web Development Team Lead", details: "Eco Mart Project (2025-Present)", description: "Led a team of 5 developers to create a sustainable e-commerce platform" },
-                    { title: "Frontend Developer Intern", details: "Tech Solutions Nepal (2024)", description: "Developed responsive web applications for various clients" }
-                ],
-                projects: [
-                    { name: "Eco Mart Login System", description: "Created secure and accessible login system with form validation" },
-                    { name: "Sustainable E-commerce Platform", description: "Led development of complete eco-friendly shopping platform" }
-                ],
-                certifications: ["Google UX Design Certificate", "Project Management Professional (PMP)", "WCAG 2.1 Accessibility"]
-            },
-            {
-                name: "Ramit Chaudhary",
-                role: "Frontend Developer",
-                bio: "Creative frontend developer specializing in responsive design and user experience optimization.",
-                fullSkills: ["HTML5", "CSS3", "JavaScript", "Vue.js", "Bootstrap", "Responsive Design", "UI/UX"],
-                education: [
-                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
-                    { title: "UI/UX Design Specialization", details: "Coursera (2024)", grade: "Completed" }
-                ],
-                experience: [
-                    { title: "Frontend Developer", details: "Eco Mart Homepage (2025)", description: "Designed and implemented responsive homepage with modern CSS techniques" },
-                    { title: "Web Design Freelancer", details: "Self-employed (2023-2024)", description: "Created websites for local businesses focusing on mobile-first design" }
-                ],
-                projects: [
-                    { name: "Eco Mart Homepage", description: "Developed responsive homepage with interactive elements" },
-                    { name: "Mobile-First Portfolio Template", description: "Created reusable portfolio template for developers" }
-                ],
-                certifications: ["Responsive Web Design Certification", "JavaScript Algorithms Certification"]
-            },
-            {
-                name: "Devendra Kandel",
-                role: "Frontend Developer",
-                bio: "E-commerce specialist with focus on product presentation and shopping experience optimization.",
-                fullSkills: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "E-commerce", "Payment Integration"],
-                education: [
-                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "Upper Second Class" },
-                    { title: "E-commerce Development", details: "Udemy (2024)", grade: "Completed" }
-                ],
-                experience: [
-                    { title: "Product Page Developer", details: "Eco Mart Products Section (2025)", description: "Created dynamic product pages with filtering and sorting capabilities" },
-                    { title: "E-commerce Assistant", details: "Online Store (2023-2024)", description: "Managed product listings and customer interface" }
-                ],
-                projects: [
-                    { name: "Eco Mart Product Catalog", description: "Built comprehensive product browsing system" },
-                    { name: "Shopping Cart System", description: "Implemented cart functionality with local storage" }
-                ],
-                certifications: ["E-commerce Development Certificate", "PHP & MySQL Certification"]
-            },
-            {
-                name: "Jenish Shrestha",
-                role: "Frontend Developer",
-                bio: "Specialist in form design and validation with focus on user interaction and data collection.",
-                fullSkills: ["HTML5", "CSS3", "JavaScript", "Form Validation", "AJAX", "jQuery", "Bootstrap"],
-                education: [
-                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
-                    { title: "JavaScript Mastery", details: "Frontend Masters (2024)", grade: "Completed" }
-                ],
-                experience: [
-                    { title: "Contact System Developer", details: "Eco Mart Contact Forms (2025)", description: "Created multiple contact forms with validation and submission handling" },
-                    { title: "Web Form Specialist", details: "Data Collection Project (2024)", description: "Developed complex forms for data gathering" }
-                ],
-                projects: [
-                    { name: "Eco Mart Contact System", description: "Built complete contact management system" },
-                    { name: "Multi-Step Form Wizard", description: "Created wizard-style form for complex data entry" }
-                ],
-                certifications: ["JavaScript Form Validation", "Bootstrap Framework Certification"]
-            },
-            {
-                name: "Saurav Dahal",
-                role: "Backend Developer",
-                bio: "Backend specialist focusing on server-side logic, database design, and API development.",
-                fullSkills: ["Node.js", "Express", "MongoDB", "REST API", "Database Design", "Authentication", "Security"],
-                education: [
-                    { title: "BSc Computing", details: "Islington College, London Metropolitan University (2023-2026)", grade: "First Class" },
-                    { title: "Backend Development", details: "FreeCodeCamp (2024)", grade: "Certified" }
-                ],
-                experience: [
-                    { title: "Backend Systems Developer", details: "Eco Mart Research Section (2025)", description: "Built research data management system with API endpoints" },
-                    { title: "Database Administrator", details: "Student Project (2024)", description: "Designed and implemented database systems for academic projects" }
-                ],
-                projects: [
-                    { name: "Eco Mart Research API", description: "Developed REST API for research data management" },
-                    { name: "User Authentication System", description: "Created secure login and registration system" }
-                ],
-                certifications: ["Node.js Developer Certificate", "MongoDB Certification", "API Development"]
-            }
-        ];
-
-        // Open portfolio modal
-        function openPortfolio(memberId) {
-            const member = portfolioData[memberId - 1];
-            const modal = document.getElementById('portfolioModal');
-            const content = document.getElementById('portfolioContent');
-            
-            // Build portfolio content
-            content.innerHTML = `
-                <div class="portfolio-header">
-                    <h2>${member.name}</h2>
-                    <p>${member.role}</p>
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">About Me</h3>
-                    <p>${member.bio}</p>
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Skills & Expertise</h3>
-                    <div class="skills-list">
-                        ${member.fullSkills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-                    </div>
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Education</h3>
-                    ${member.education.map(edu => `
-                        <div class="education-item" style="margin-bottom: 15px;">
-                            <div class="item-title">${edu.title}</div>
-                            <div class="item-details">${edu.details}</div>
-                            <div style="color: #4a7c59; font-weight: bold;">${edu.grade}</div>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Experience</h3>
-                    ${member.experience.map(exp => `
-                        <div class="experience-item" style="margin-bottom: 15px;">
-                            <div class="item-title">${exp.title}</div>
-                            <div class="item-details">${exp.details}</div>
-                            <p style="color: #666; margin-top: 5px;">${exp.description}</p>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Projects</h3>
-                    ${member.projects.map(project => `
-                        <div style="margin-bottom: 15px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
-                            <div style="font-weight: bold; color: #333;">${project.name}</div>
-                            <div style="color: #666;">${project.description}</div>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <div class="portfolio-section">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px;">Certifications</h3>
-                    <div class="skills-list">
-                        ${member.certifications.map(cert => `<span class="skill-tag">${cert}</span>`).join('')}
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 30px;">
-                    <button onclick="closePortfolio()" style="background-color: #4a7c59; color: white; border: none; padding: 10px 30px; border-radius: 5px; cursor: pointer; font-size: 16px;">
-                        Close Portfolio
-                    </button>
-                </div>
-            `;
-            
-            modal.style.display = 'flex';
-        }
-
-        // Close portfolio modal
-        function closePortfolio() {
-            document.getElementById('portfolioModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('portfolioModal');
-            if (event.target === modal) {
-                closePortfolio();
-            }
-        }
-
-        // Simple animation for team cards on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const teamCards = document.querySelectorAll('.team-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0px)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            teamCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
 </body>
 </html>
