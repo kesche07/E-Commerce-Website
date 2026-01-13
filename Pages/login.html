@@ -2,36 +2,17 @@
     <head>
         <title>Login</title>
         <style>
-            
             .container{
                 height:50%;
                 width: 20%;
-                margin:5%;
+                margin:auto;
                 padding:30px;
-            
                 position: absolute;
-                top: 40%;
-                left: 45%;
+                top: 50%;
+                left: 50%;
                 transform: translate(-50%, -50%); 
             }
             
-            h3{
-                display: inline;
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-                
-            }
-            button{
-                margin:20px;
-                height: 50px;
-                width:100px;
-                font-size: large;
-                background-color: #273B09;
-                color:#E6EED6;
-                box-shadow: 3px 3px 0px rgba(0, 0, 0 );
-            }
-            p{
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            }
             form input[type="text"] {
                 height:10%;
                 width:70%;
@@ -58,6 +39,9 @@
                 border-radius: 5%;
                 box-shadow: 3px 3px 0px rgba(0, 0, 0 );
             }
+            .leaf{
+                display: inline;
+            }
         </style>
     </head>
     <body>
@@ -67,11 +51,11 @@
                 <img src="../Assets/logo.png" alt="logo">
             </div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>|
-                    <li><a href="#">Blog</a></li>|
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
                     <li><a href="./aboutus.html">About Us</a></li>|
-                    <li><a href="#">Products</a></li>|
-                    <li><a href="#">Contact Page</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
                     <li><a href="./helpsupport.html">Help and Support</a></li>|
                     <li><a href="#">Login</a></li>
                 </ul>
@@ -79,10 +63,11 @@
 
         <section class="container"> 
             <h3> Login</h3>  <img src="../Assets/leaf1.png " width="30px" class="leaf1">     
+            <br><br>
             <form class="form">
-                <p>Enter Username:</p> <input type="text" placeholder="Enter Username" id="user"><br>
-                <p>Enter Password:</p><input type="password" placeholder="Enter Password" id="pass"><br><br>
-                <button type="button" onclick="check()"> Login</button>
+                <label>Enter Username:</label> <input type="text" placeholder="Enter Username" id="user"><br><br>
+                <label>Enter Password:</label><input type="password" placeholder="Enter Password" id="pass"><br><br>
+                <button onclick="check()"> Login</button>
             </form>
         </section>
             
@@ -96,7 +81,7 @@
                     return false;
                 }
                 else{
-                    window.location.href="helpsupport.html";
+                    window.location.href="aboutus.html";
                     return false;
                 }
             }
