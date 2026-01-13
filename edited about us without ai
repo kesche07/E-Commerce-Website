@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Eco Mart</title>
+    <style>
+         * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+         body {
+                margin: 0;
+                background-color: #E6EED6;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 20px;
+        }
+       
+        
+        /* Header */
+        header {
+            background-color: #547a54;
+            color: white;
+            padding: 20px 0px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+         nav {
+            background-color: #649164;
+            padding: 15px 0px;
+        }
+         nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+         }
+          nav li {
+            margin: 0px 15px;
+        }
+          nav a:hover {
+            color: #a5d6a7;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+          nav a {
+            color: white;
+           
+        }
+        .subheading
+        {
+            background: linear-gradient(rgba(45, 90, 60, 0.85), rgba(30, 64, 39, 0.9));
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+         .subheading h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+         .subheading p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0px auto;
+            line-height: 1.8;
+        }
+        /* gghg */
+         .Quote {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+           float: none;
+           text-align: center;
+        }   
 
+        .Quote h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .Quote p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .team-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-header h2 {
+            color: #2e7d32;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            color: #666;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0px auto;
+        }
+          .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+         .team-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+          .member-header {
+            background-color: #4a7c59;
+            color: white;
+            padding: 25px;
+            text-align: center;
+           
+        }
+         .member-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0px auto 15px;
+           
+            background-color: #e0f2e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .member-photo i {
+            font-size: 70px;
+            color: #4a7c59;
+        }
+        .member-name {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+         .member-role {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        
+
+
+
+
+
+
+        
+
+
+
+</style>
+  
+  <body>
+<!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Eco Mart</div>
+            <p class="tagline">Save our planet</p>
+        </div>
+    </header>
+     <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+     <div class="container">
+        <!-- subheading Section -->
+        <section class="subheading">
+            <h1>Meet Our Team</h1>
+            <p>Learn sustainability with us and teach others how to make eco-friendly choices every day.</p>
+        </section>
+         <section class="Quote">
+            <h2>Our Mission</h2>
+            <p>Educate about sustainability and promote eco-friendly living practices.</p>
+            <p>Let's save our planet together for future generations.</p>
+        </section>
+
+        <!-- Team Section -->
+        <div class="team-header">
+            <h2>The Eco Mart Team</h2>
+            <p>Get to know the people behind our eco-friendly mission</p>
+        </div>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Keschella Parajuli</h3>
+                    <p class="member-role">Team Leader & Frontend Developer</p>
+                    <a href="#portfolio1" class="portfolio-link" onclick="openPortfolio(1)">
+                        <i class=""></i> View Portfolio
+                    </a>
+                </div>
+                
+               <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Ramit Chaudhary</h3>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio2" class="portfolio-link" onclick="openPortfolio(2)">
+                        <i class=""></i> View Portfolio
+                    </a>
+                </div>
+                  <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Devendra Kandel</h3>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio3" class="portfolio-link" onclick="openPortfolio(3)">
+                        <i class=""></i> View Portfolio
+                    </a>
+                </div>
+                 <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Jenish Shrestha</h3>
+                    <p class="member-role">Frontend Developer</p>
+                    <a href="#portfolio4" class="portfolio-link" onclick="openPortfolio(4)">
+                        <i class=""></i> View Portfolio
+                    </a>
+                </div>
+                  <!-- Team Member 5 -->
+            <div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Pranisha Bhuju</h3>
+                    <p class="member-role">Backend Developer</p>
+                    <a href="#portfolio5" class="portfolio-link" onclick="openPortfolio(5)">
+                        <i class=""></i> View Portfolio
+                    </a>
+                </div>
+               
+
+    
+  </body>
+   
+    
+</head>
+</html>        
