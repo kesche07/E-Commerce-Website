@@ -87,7 +87,7 @@ footer{
     /** **/
     text-align: center;
     margin-top: auto;
-    min-width: max-content;
+    
 }
 
 .footer-content{
@@ -96,15 +96,19 @@ footer{
 }
 .footer-section{
     width:20%;
-    margin:20px;
+    margin:10px;
     text-align:left;
 }
 .footer-section a,p{
     display: block;
+    margin: 4px 0;
+    line-height: 1;
 }
 .footer-section a{
     color:#E6EED6;
     text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 .footer-section a:hover{
     text-decoration:underline;
