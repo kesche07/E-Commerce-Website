@@ -3,85 +3,134 @@
         <title>Help and Support</title>
         <style>
             .container{
-                height:50%;
+                height:45%;
                 width: 20%;
-                margin:5%;
                 padding:30px;
-            
-                position: absolute;
-                top: 40%;
-                left: 45%;
-                transform: translate(-50%, -50%); 
+                max-width: 800px;
+                margin: 50px auto; /* Adds vertical breathing room and keeps centered.*/
+            }
+            select{
+                width:90%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            textarea{
+                width:90%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
         </style>
+        <link rel="stylesheet" href="../CSS/style.css">
     </head>
     <body>
-        <link rel="stylesheet" href="../CSS/style.css">
+        
         <nav class="navbar">
              <div class="logo">
                 <img src="../Assets/logo.png" alt="logo">
             </div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>|
-                    <li><a href="#">Blog</a></li>|
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
                     <li><a href="./aboutus.html">About Us</a></li>|
-                    <li><a href="#">Products</a></li>|
-                    <li><a href="#">Contact Page</a></li>|
-                    <li><a href="./helpsupport.html">Help and Support</a></li>|
-                    <li><a href="#">Login</a></li>
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="#">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
                 </ul>
         </nav>
+        <div class="content">
         <section class="container">
-            <h1>How can we help?</h1>
+            <h3>How can we help?</h3><br><br>
             <form>
-                Enter your issue:
-                <select id="Issue" onchange="issue()">
-                    <option value="">-- Select --</option>
+                <label>Enter your issue:</label>
+                <br><br><select id="Issue" onchange="issue()">
+                    <option value="default">-- Select --</option>
                     <option value="login">Login Issues</option>
                     <option value="payment">Payment issues</option>
-                    <option value="seller">Report a Seller</option>
                     <option value="return">Return or Exchange a product</option>
                     <option value="bug">Report in-app bug</option>
-                    <option value="other">Other bugs</option>
+                    <option value="other">Other</option>
                 </select><br>
 
-                
+                <!--Hidden button thatll appear when 'other' is chosen-->
+                <br>
+                <button type="button" onclick="redirect()" style="display:none;" id="redirect">Go to Contact Page</button>
 
                 <!--not visible unless 'other' option is selected-->
-                <p id="result"></p>
                 
-                <!-- Hidden message box -->
+                <!-- Hidden message box thatll appear when some option is selected-->
+                 
                 <div id="otherBox" style="display:none;">
-                    <label for="message">Please describe your issue:</label><br>
+                    <label>Please describe your issue:</label><br><br>
                     <textarea id="message" rows="5" cols="40"
-                    placeholder="Type your message here..."></textarea>
+                    placeholder="Type your message here..."></textarea><br><br>
+                    <button type="button" onclick="submit()">Submit</button>
                 </div>
             </form>
         </section>
+        </div>
+
+        <br><br><br>
         <footer>
-            <hr>
-            <p>&copy website name 2026 </p>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Eco Mart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
+                </div>
+            </div>
         </footer>
+        
+
         <!--js-->
         <script>
             function issue(){
                 const i = document.getElementById("Issue").value;
                 const box = document.getElementById("otherBox");
+                const redirect=document.getElementById("redirect");
+                const message=document.getElementById("message").value;
 
-                if (i==="seller"){
-                    document.getElementById('')
+                if (i==="other" || i=="payment" || i=="return"){
+                    redirect.style.display = "block";
+                    box.style.display = "none";
                 }
-                else if(i==="return"){
-
+                else if(i=="default"){
+                    redirect.style.display = "none";
+                    box.style.display = "none";
                 }
-                else if(i==="bug"){
-
-                }
-                else{
+                else {
                     box.style.display = "block";
-                    
+                    redirect.style.display = "none";
                 }
             }
+            function redirect(){
+                window.location.href="#";
+            }
+            function submit(){
+                if(message.trim()==""){
+                    alert("Please do not leave the box empty!");
+                }
+                else{
+                    window.location.href="#";
+                }
+            }
+            
         </script>
     </body>
 </html>
