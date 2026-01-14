@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }body {
+  background: #eaf3dc;
+}
+
+/* Navbar */
+header {
+  background: #2f4f1e;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/* Page title */
+.page-title {
+  background: #c9ddb3;
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Contact section */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.image-box {
+  flex: 1;
+  border: 2px solid #333;
+  height: 450px; /* bigger map */
+}
+
+
+
+.image-box::after {
+  transform: rotate(-45deg);
+}
+
+.form-box {
+  flex: 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Footer contact */
+.contact-footer {
+  background: #2f4f1e;
+  color: #fff;
+  padding: 40px;
+}
+
+.contact-footer h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer-item {
+  max-width: 200px;
+}
+
+.footer-item span {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .footer-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="logo" background="#2f4f1e"><img src=C:\Users\ASUS\Downloads\611655978_1584762796309517_1061416936952664724_n.jpg width="50" height="50"></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+      <a href="#">Products</a>
+      <a href="#">Contact Page</a>
+      <a href="#">Help & Support</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>  <div class="page-title">Contact Us</div>  <section class="contact-container">
+    <div class="image-box">
+      <iframe
+        src="https://www.google.com/maps?q=Islington+College+Kathmandu+Nepal&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div><div class="form-box">
+  <div class="form-row">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" placeholder="Enter First Name" />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="Enter Email Address" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea placeholder="Enter your Message"></textarea>
+  </div>
+</div>
+
+  </section>  <footer class="contact-footer">
+    <h3>Other Ways to Contact Us</h3>
+    <div class="footer-items">
+      <div class="footer-item">
+        <span>📞</span>
+        <strong>Phone Number</strong>
+        <p>970-000-0000</p>
+      </div>
+      <div class="footer-item">
+        <span>✉️</span>
+        <strong>Email Address</strong>
+        <p>ecoethicteam@gmail.com</p>
+      </div>
+      <div class="footer-item">
+        <span>🔗</span>
+        <strong>Social Media</strong>
+        <p></p>
+      </div>
+    </div>
+  </footer></body>
+</html>
