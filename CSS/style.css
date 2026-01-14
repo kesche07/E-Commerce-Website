@@ -31,7 +31,7 @@ body {
 .nav-links a:hover{
     text-decoration: underline;
     opacity: 0.5;
-    transition: 0.5s; /*gives effect*/
+    transition: 0.3s; /*gives effect*/
 }           
 .container{
     border-radius: 20px;
@@ -127,4 +127,5 @@ footer{
 .footer-bottom{
     font-size:x-small;
 }
+
 
