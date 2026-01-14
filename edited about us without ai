@@ -168,8 +168,103 @@
             opacity: 0.9;
             font-size: 16px;
         }
+           /* Portfolio Modal */
+        .portfolio-modal {
+            display: none;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
         
-        
+         /* Footer */
+        footer {
+            background-color: #1e4027;
+            color: white;
+            padding: 40px 0px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+          
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0px auto 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #a5d6a7;
+            font-size: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+          .footer-section a:hover {
+            color: #c8e6c9;
+            text-decoration: underline;
+        }
+
+        .footer-section i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+            /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0px;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-section {
+                text-align: center;
+            }
+        }
 
 
 
@@ -280,6 +375,36 @@
                         <i class=""></i> View Portfolio
                     </a>
                 </div>
+                 <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="portfolio-modal">
+        <div class="portfolio-content">
+            <span class="close-modal" onclick="closePortfolio()">&times;</span>
+            <div id="portfolioContent">
+                <!-- Portfolio content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+     <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eco Mart</h3>
+                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
+                    <p><i class="fas fa-phone"></i> 011-98646</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                </div>
+            </div>
                
 
     
