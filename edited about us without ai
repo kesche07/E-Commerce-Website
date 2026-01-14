@@ -24,13 +24,7 @@
         }
        
         
-        /* Header */
-        header {
-            background-color: #547a54;
-            color: white;
-            padding: 20px 0px;
-            text-align: center;
-        }
+     
         
         .logo {
             font-size: 32px;
@@ -42,8 +36,8 @@
             font-size: 18px;
             opacity: 0.9;
         }
-         nav {
-            background-color: #649164;
+        nav {
+            background-color:#273B09;
             padding: 15px 0px;
         }
          nav ul {
@@ -55,16 +49,20 @@
             margin: 0px 15px;
         }
           nav a:hover {
-            color: #a5d6a7;
+            color: #a6e8a8;
             background-color: rgba(255, 255, 255, 0.1);
         }
           nav a {
-            color: white;
-           
+            text-decoration: none;
+            color: #E6EED6;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
         }
+         /* subheading Section */
         .subheading
         {
-            background: linear-gradient(rgba(45, 90, 60, 0.85), rgba(30, 64, 39, 0.9));
+            background: linear-gradient(rgba(14, 80, 36, 0.85), rgba(193, 200, 195, 0.9));
             background-size: cover;
             background-position: center;
             color: white;
@@ -182,109 +180,92 @@
             align-items: center;
         }
         
-         /* Footer */
+          /* Footer */
         footer {
-            background-color: #1e4027;
+            background-color:#273B09;
             color: white;
-            padding: 40px 0px;
+            padding: 40px 0;
             text-align: center;
         }
-
+        
         .footer-content {
             display: flex;
-          
+            flex-wrap: wrap;
             justify-content: space-around;
             max-width: 1200px;
-            margin: 0px auto 30px;
+            margin: 0 auto 30px;
         }
-
+        
         .footer-section {
             flex: 1;
             min-width: 250px;
             margin: 20px;
             text-align: left;
         }
-
+        
         .footer-section h3 {
             margin-bottom: 20px;
             color: #a5d6a7;
             font-size: 20px;
         }
-
+        
         .footer-section p, .footer-section a {
             color: #ddd;
             text-decoration: none;
             margin-bottom: 10px;
             display: block;
         }
-          .footer-section a:hover {
-            color: #c8e6c9;
-            text-decoration: underline;
-        }
-
+        
         .footer-section i {
             margin-right: 10px;
             width: 20px;
         }
-
+        
+        .footer-section a:hover {
+            color: #c8e6c9;
+            text-decoration: underline;
+        }
+        
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
             font-size: 14px;
             color: #aaa;
         }
-            /* Responsive Design */
+        
         @media (max-width: 768px) {
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
             nav ul {
                 flex-direction: column;
                 align-items: center;
             }
+        }
             
             nav li {
-                margin: 5px 0px;
+                margin: 5px 0;
             }
             
-            .hero h1 {
-                font-size: 28px;
-            }
-            
-            .hero p {
-                font-size: 16px;
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
             
             .footer-content {
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
             
             .footer-section {
                 text-align: center;
             }
-        }
-
-
-
-
-
 
         
 
 
 
 </style>
-  
-  <body>
+   <body>
 <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Eco Mart</div>
-            <p class="tagline">Save our planet</p>
-        </div>
-    </header>
+   
      <nav>
         <div class="container">
             <ul>
@@ -296,6 +277,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
+ 
     </nav>
      <div class="container">
         <!-- subheading Section -->
@@ -315,7 +297,9 @@
             <p>Get to know the people behind our eco-friendly mission</p>
         </div>
         <div class="team-grid">
+
             <!-- Team Member 1 -->
+            
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
@@ -324,11 +308,12 @@
                     <h3 class="member-name">Keschella Parajuli</h3>
                     <p class="member-role">Team Leader & Frontend Developer</p>
                     <a href="#portfolio1" class="portfolio-link" onclick="openPortfolio(1)">
-                        <i class=""></i> View Portfolio
+                        <i class="fas fa-eye"></i> View Portfolio
                     </a>
                 </div>
-                
-               <div class="team-card">
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
                         <i class="fas fa-user"></i>
@@ -336,10 +321,12 @@
                     <h3 class="member-name">Ramit Chaudhary</h3>
                     <p class="member-role">Frontend Developer</p>
                     <a href="#portfolio2" class="portfolio-link" onclick="openPortfolio(2)">
-                        <i class=""></i> View Portfolio
+                        <i class="fas fa-eye"></i> View Portfolio
                     </a>
                 </div>
-                  <!-- Team Member 3 -->
+            </div>
+            
+            <!-- Team Member 3 -->
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
@@ -348,10 +335,12 @@
                     <h3 class="member-name">Devendra Kandel</h3>
                     <p class="member-role">Frontend Developer</p>
                     <a href="#portfolio3" class="portfolio-link" onclick="openPortfolio(3)">
-                        <i class=""></i> View Portfolio
+                        <i class="fas fa-eye"></i> View Portfolio
                     </a>
                 </div>
-                 <!-- Team Member 4 -->
+            </div>
+            
+           <!-- Team Member 4 -->
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
@@ -360,10 +349,12 @@
                     <h3 class="member-name">Jenish Shrestha</h3>
                     <p class="member-role">Frontend Developer</p>
                     <a href="#portfolio4" class="portfolio-link" onclick="openPortfolio(4)">
-                        <i class=""></i> View Portfolio
+                        <i class="fas fa-eye"></i> View Portfolio
                     </a>
                 </div>
-                  <!-- Team Member 5 -->
+            </div>
+            
+            <!-- Team Member 5 -->
             <div class="team-card">
                 <div class="member-header">
                     <div class="member-photo">
@@ -372,9 +363,12 @@
                     <h3 class="member-name">Pranisha Bhuju</h3>
                     <p class="member-role">Backend Developer</p>
                     <a href="#portfolio5" class="portfolio-link" onclick="openPortfolio(5)">
-                        <i class=""></i> View Portfolio
+                        <i class="fas fa-eye"></i> View Portfolio
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
                  <!-- Portfolio Modal -->
     <div id="portfolioModal" class="portfolio-modal">
         <div class="portfolio-content">
@@ -384,7 +378,10 @@
             </div>
         </div>
     </div>
-     <footer>
+     <!-- Footer -->
+     
+    
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -393,10 +390,10 @@
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="products.html">Products</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a>
+                    <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
@@ -405,11 +402,11 @@
                     <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
                 </div>
             </div>
-               
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
+            </div>
+        </div>
+    </footer>
 
-    
-  </body>
-   
-    
-</head>
+</body>
 </html>        
