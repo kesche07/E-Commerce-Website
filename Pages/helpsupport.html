@@ -49,7 +49,7 @@
 
                 <!--Hidden button thatll appear when 'other' is chosen-->
                 <br>
-                <button type="button" onclick="redirect()" style="display:none;" id="redirect">Go to Contact Page</button>
+                <button type="button" onclick="redirectPage()" style="display:none;" id="redirect">Go to Contact Page</button>
 
                 <!--not visible unless 'other' option is selected-->
                 
@@ -59,7 +59,7 @@
                     <label>Please describe your issue:</label><br><br>
                     <textarea id="message" rows="5" cols="40"
                     placeholder="Type your message here..."></textarea><br><br>
-                    <button type="button" onclick="submit()">Submit</button>
+                    <button type="button" onclick="submitIssue()">Submit</button>
                 </div>
             </form>
         </section>
@@ -116,15 +116,17 @@
                     redirect.style.display = "none";
                 }
             }
-            function redirect(){
-                window.location.href="#";
+            function redirectPage(){
+                window.location.href="./contact.html";
             }
-            function submit(){
+            function submitIssue(){
+                const message = document.getElementById("message").value;
                 if(message.trim()==""){
                     alert("Please do not leave the box empty!");
                 }
                 else{
-                    window.location.href="./contact.html";
+                    alert("Thank You!");
+                    window.location.href="../index.html";
                 }
             }
             
