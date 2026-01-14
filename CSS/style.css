@@ -35,7 +35,7 @@ body {
 }           
 .container{
     border-radius: 20px;
-    background-color:rgba(35, 115, 1, 0.4);
+    background-color:rgba(35, 115, 1, 0.2);
     text-align: center;
 }
 /* text*/
@@ -110,4 +110,5 @@ footer{
 .footer-bottom{
     font-size:x-small;
 }
+
 
