@@ -1,13 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     background-color: #E6EED6;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+    overflow-x: hidden; /*prevent unwanted horizontal scrolling*/
 }
 .navbar {
     background-color: #273B09;
     display: flex;
     align-items: center;
+    min-width: 100vh;
+    width:100%;
     padding: 15px 40px;
 }
 .logo img {
@@ -39,7 +47,7 @@ body {
     text-align: center;
 }
 /* text*/
-h3 , a{
+h3 , h1, a{
     display: inline;
     margin-bottom: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -94,6 +102,7 @@ footer{
     text-align: center;
     background-color: #273B09;
     color:#E6EED6;
+    min-width: 100vh;
     width:100%;
     text-align: center;
     margin-top: auto;
@@ -122,10 +131,9 @@ footer{
 .footer-section a:hover{
     text-decoration:underline;
     opacity: 0.5;       /* changes opacity */
-    transition: opacity 0.5s; /* gives effect when hovered*/
+    transition: opacity 0.3s; /* gives effect when hovered*/
 }
 .footer-bottom{
     font-size:x-small;
 }
-
 
