@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="../CSS/style.css">
         <style>
@@ -7,18 +10,66 @@
                 color:#273B09;
             }
             .container{
-                background-color: rgba(255, 255, 255, 0);
                 width:fit-content;
-                padding:20px;
-                margin: 50px auto;
+                max-width: 600px;
+                padding:10px;
+                margin: auto;
             }
-            .row{
+            .profile{
                 display:flex;
                 flex-direction: row;
             }
             p{
+                color:#273B09;
                 text-align: left;
             }
+            .photo img{
+                border-top-left-radius: 13px;
+                border-bottom-left-radius: 13px;
+                width:310px;
+            }
+
+            .thumb {
+                width: 100px;
+                height: 60px;
+                transition: transform 0.2s;  
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;
+                transition: transform 0.2s;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                max-width: 100%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+    box-shadow: 3px 3px 0px #273B09;
+    transition:0.2s;
+            }
+
 
         </style>
     </head>
@@ -37,46 +88,163 @@
                     <li><a href="#">Login</a></li>
                 </ul>
         </nav>
-        <h1>Meet our team members</h1><img src="../Assets/leaf2.png " width="30px" class="leaf1">
+        <h1>Meet our team members</h1><img src="../Assets/leaf.png " width="30px" class="leaf1">
         <section class="container">
-            <section class="row">
-            <section class="photo">
-                <img src="../Assets/product1.jpg">
-            </section>
-            <section class="text">
-                <p>
-                    Profile:<br>
-    An ambitious and assertive student who strives for perfection, and giving best effort in my work.<br>
-
-Education:<br>
-
-2023-2024
- Highschool
-Kathmandu World School 
+    <div class="profile" style="display:flex;">
+        <div class="photo">
+            <img src="../Assets/Photos/member1.png" alt="Team Member">
+        </div>
+        <div class="text" >
+            <p >
+                <strong>Keschella Agustin Parajuli</strong><br><br>
+                <strong>Profile:</strong><br>
+                An ambitious and assertive student who strives for perfection, and giving best effort in my work.<br>
+                <br>
+                <strong>Education:</strong><br>
+                2023-2024<br>
+Highschool<br>
+Kathmandu World School<br>
 NEB (+2) - Science<br>
 
-2025-Onwards
-BsIT (Computing)
-Islington College<br>
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, PHP, Java<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
 
-Computer Skills:<br>
-C<br>
-HTML<br>
-CSS<br>
-JS<br>
-Java<br>
 
-Technical Skills:<br>
-Graphics Design<br>
-Video Editing<br>
 
-Contact:<br>
-Gmail: keschellap@gmail.com<br>
+            </p>
+        </div>
+    </div>
+    <div class="profile" style="display:none;">
+        <div class="photo" >
+            <img src="../Assets/Photos/member2.png"  alt="Team Member">
+        </div>
+        <div class="text">
+            <p >
+                <strong>Pranisha Bhuju</strong><br><br>
+                <strong>Profile:</strong><br>
+                Curious and motivated<br><br>
+                <strong>Education:</strong><br>
+                2022-2023<br>
+Highschool<br>
+Sainik Awasiya Mahavidyalaya, Sallaghari Bhaktapur
+NEB (+2) - Science<br>
 
-                </p>
-                </section>
-            </section>
-        </section>
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C,C++, HTML, CSS, JavaScript, Java,Python<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
+
+
+
+            </p>
+        </div>
+    </div>
+    <div class="profile" style="display:none;">
+        <div class="photo">
+            <img src="../Assets/Photos/member3.png" alt="Team Member">
+        </div>
+        <div class="text">
+            <p><strong>Jenish Shrestha</strong><br><br>
+                <strong>Profile:</strong><br>
+                Computing student studying bachelor's at Islington College<br><br>
+                <strong>Education:</strong><br>
+                2023-2024<br>
+Highschool<br>
+RoseBud School
+NEB (+2) - Management <br>
+
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+HTML, CSS, JavaScript<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
+
+
+            </p>
+        </div>
+    </div>
+    <div class="profile" style="display:none;">
+        <div class="photo">
+            <img src="../Assets/Photos/member4.png" alt="Team Member">
+        </div>
+        <div class="text">
+            <p> 
+                <strong>Devendra Kandel</strong><br><br>
+                <strong>Profile:</strong><br>
+                Ambitious computing student with strong programming skills and a passion for problem‑solving.<br><br>
+                <strong>Education:</strong><br>
+                2022-2023<br>
+                Highschool<br>
+Trinity International College and SS<br>
+NEB (+2) - Science <br>
+
+
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, Java<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
+
+            </p>
+        </div>
+    </div>
+    <div class="profile" style="display:none;">
+        <div class="photo">
+            <img src="../Assets/Photos/member5.png"  alt="Team Member">
+        </div>
+        <div class="text">
+            <p >
+                <strong>Ramit Chaudary</strong><br><br>
+                <strong>Profile:</strong><br>
+                Dedicated IT student with a focus on building efficient, scalable digital solutions.<br><br>
+                <strong>Education:</strong><br>
+                2022-2023<br>
+                Highschool<br>
+Trinity International College and SS<br>
+NEB (+2) - Science <br>
+
+
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, Java<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
+
+            </p>
+        </div>
+    </div>
+    
+</section>
+<section class="behind">
+    <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" data-index="0"><img src="../Assets/Photos/member1.png"></div>
+            <div class="thumb" data-index="1"><img src="../Assets/Photos/member2.png"></div>
+            <div class="thumb" data-index="2"><img src="../Assets/Photos/member3.png"></div>
+            <div class="thumb" data-index="3"><img src="../Assets/Photos/member4.png"></div>
+            <div class="thumb" data-index="4"><img src="../Assets/Photos/member5.png"></div>
+        </div>
+    </section>
+</section>
         <footer>
             <div class="footer">
                 <div class="footer-content">
@@ -105,4 +273,27 @@ Gmail: keschellap@gmail.com<br>
             </div>
         </footer>
     </body>
+    <script>
+    var profiles = document.getElementsByClassName("profile");
+    var thumbs = document.getElementsByClassName("thumb");
+
+    for (var i = 0; i < thumbs.length; i++)//goes through each thumbnail
+    { 
+        thumbs[i].onclick = function() //only runs this function when clicked
+         {
+            var index = this.getAttribute("data-index"); //reads the index
+            showMember(index); //calls function
+        };
+    }
+
+    function showMember(index) {
+        for (var i = 0; i < profiles.length; i++) //checks every profile 
+        {
+            profiles[i].style.display = "none"; //hides those profiles which arent selected
+        }
+        // show selected profile
+        profiles[index].style.display = "flex"; //shows the selected profile
+    }
+    
+</script>
 </html>
