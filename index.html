@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 <style>
-  .navbar {
-  display: flex;
-  justify-content: space-around; /* evenly spaced links */
-  align-items: center;           /* vertically aligned */
-  background-color: #c2d9d9;
-  padding: 10px;
-  border-radius: 20px;
-}
 
 .aboutus {
   background-image: url('Assets/background.jpg'); /* your background image */
@@ -46,34 +38,33 @@
 
 #img {
   display: flex;
-  gap: 30px;               /* single spacing between cards */
-  justify-content: center; /* center the group */
-  flex-wrap: wrap;         /* allow wrapping on smaller screens */
-  padding: 0;              /* remove extra margin/padding */
-  margin: 0;               /* no double margin */
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out; /* Add fade effect */
 }
 
 .product {
-  width: 500px;            /* fixed card width */
+  width: 30%;            /* fixed card width */
   background-color: #f9f9f9;
-  border: 2px solid #007777;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0);
 }
 
 .product img {
-  width: 500px;             /* image fills card width */
-  height: 500px;           /* fixed height for consistency */
+  width:90%;
+  aspect-ratio: 1/1;           /* fixed height for consistency */
   object-fit: cover;       /* crop/scale to fit neatly */
-  border: 2px solid #000;
+  border: 0.5px solid #000;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.product img:hover {
-  border: 2px solid red;
-  transform: scale(1.05);
+
+.product:hover {
+  transform: translate(-5px, -5px); /* moves up on hover */
+    box-shadow: 3px 3px 0px #273B09;
+    transition:0.2s;
 }
 
 .label {
@@ -85,7 +76,7 @@
 
 </style> </head>
 <body>
-      <link rel="stylesheet" href="../CSS/style.css">
+      <link rel="stylesheet" href="CSS/style.css">
               <nav class="navbar">
              <div class="logo">
                 <img src="Assets/logo.png" alt="logo">
@@ -113,39 +104,40 @@
         Our mission is to combine quality with responsibility for a greener future.
      </p>
     </div>
-  </div>
+  </div><br>
 
-    <h1 style="text-align: center;"> Our Top selling products</h1>
+    <h1 style="text-align: center; display: block; width: 100%;"> Our Top selling products</h1>
     <section class="products">
       <div id="img"></div> <br> <br>
 
        <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Eco Mart</h3>
-                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
-                </div>
-               <div class="footer-section">
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoEthics</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
                         <h3>Quick Links</h3><br>
                         <a href="../index.html">Home</a>
                         <a href="./products.html">Products</a>
                         <a href="./blog.html">Blog</a>
                         <a href="./contact.html">Contact Us</a>
                     </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
-                    <p><i class="fas fa-phone"></i> 011-98646</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecoethicsnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
 </body>
