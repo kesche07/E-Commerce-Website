@@ -14,7 +14,7 @@
 .products {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 60px; /* Increased gap for a cleaner look */
     row-gap:50px;
     padding: 40px;
@@ -44,7 +44,7 @@
 .product-card img {
     width: 100%; /* Makes image responsive to card width */
     max-width: 184px; 
-    height: 171px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 8px; /* Slightly rounded corners for the image itself */
     margin-bottom: 15px; /* Space between image and text */
@@ -88,7 +88,7 @@ input[type="search"]{
     <section class="products">
         <div class="product">
         <div class="product-card">
-            <img src="../Assets/product1.jpg">
+            <img src="../Assets/product1.jpg"><br>
             <h3>Bamboo Bottle</h3>
         </div><br>
         <label>Price:$29.99</label>
@@ -96,7 +96,7 @@ input[type="search"]{
 
         <div class="product">
         <div class="product-card">
-            <img src="../Assets/product2.jpg" >
+            <img src="../Assets/product2.jpg" ><br>
             <h3>Bamboo Toothbrush</h3>
         </div><br>
             <label>Price:$49.99</label>
@@ -104,7 +104,7 @@ input[type="search"]{
 
         <div class="product">
         <div class="product-card">
-            <img src="../Assets/product3.jpg">
+            <img src="../Assets/product3.jpg"><br>
             <h3>Hello Tea</h3>
         </div><br>
             <label>Price:$49.99</label>
@@ -112,7 +112,7 @@ input[type="search"]{
 
         <div class="product">
         <div class="product-card">
-            <img src="../Assets/product4.jpg">
+            <img src="../Assets/product4.jpg"><br>
             <h3>Wooden Utensils</h3>
         </div><br>
             <label>Price:$49.99</label>
@@ -120,7 +120,7 @@ input[type="search"]{
 
         <div class="product">
         <div class="product-card">
-            <img src="../Assets/product5.jpg">
+            <img src="../Assets/product5.jpg"><br>
             <h3>Eco plate</h3>
         </div><br>
             <label>Price:$49.99</label>
@@ -128,7 +128,7 @@ input[type="search"]{
         
         <div class="product">
         <div class="product-card">
-            <img src=  "../Assets/product6.jpg">
+            <img src=  "../Assets/product6.jpg"><br>
             <h3>Eco comb</h3>
         </div><br>
             <label>Price:$49.99</label>
