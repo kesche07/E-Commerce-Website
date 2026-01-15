@@ -4,21 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
 <style>
-  .navbar {
-  display: flex;
-  justify-content: space-around; /* evenly spaced links */
-  align-items: center;           /* vertically aligned */
-  background-color: #c2d9d9;
-  padding: 10px;
-  border-radius: 20px;
-}
-
 .aboutus {
   background-image: url('Assets/background.jpg'); /* your background image */
   background-size: cover;       /* make it cover the whole section */
   background-position: center;  /* center the image */
-  height: 400px;                /* adjust height as needed */
+  height: 400px;
+  width:100%;                /* adjust height as needed */
   display: flex;
   align-items: center;          /* vertically center text */
   justify-content: center;      /* horizontally center text */
@@ -33,38 +26,43 @@
   text-align: center;
 }
 
-.overlay h1 {
+.overlay h1, .overlay a {
   font-size: 36px;
   margin-bottom: 10px;
+  color:#E6EED6;
+  text-decoration: none;
+}
+.overlay a:hover{
+  text-decoration:underline;
+  opacity: 0.7;
+  transition:0.3;
 }
 
 .overlay p {
   font-size: 18px;
   max-width: 600px;
+  color:#E6EED6;
 }
 
 .Product {
   flex: 0 0 auto;            /* keep fixed width, don’t shrink */
   width: 300px;
   background-color: #f9f9f9;
-  border: 2px solid #007777;
-  border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #img {
   display: flex;
   gap: 50px;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   padding-left: 30px; 
 }
 
 #img img {
-  width: 500px;
-  height: 500px;
-  border: 2px solid #000;
+  width:400px;
+  height:400px;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
@@ -81,30 +79,32 @@
 .product {
   text-align: center;
 }
+h1{
+  text-align: center;
+}
 
 </style> </head>
 <body>
-      <link rel="stylesheet" href="../CSS/style.css">
+      
         <nav class="navbar">
              <div class="logo">
-                <img src="Assets/logo.png" alt="Logo">
-
+                <img src="Assets/logo.png" alt="logo">
             </div>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>|
-                    <li><a href="Pages/blog.html">Blog</a></li>|
-                    <li><a href="Pages/aboutus.html">About Us</a></li>|
-                    <li><a href="Pages/products.html">Products</a></li>|
-                    <li><a href="Pages/contact.html">Contact Page</a></li>|
-                    <li><a href="Pages/helpsupport.html">Help and Support</a></li>|
-                    <li><a href="Pages/login.html">Login</a></li>
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./Pages/helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
                 </ul>
-        </nav><br> 
+        </nav>
 
    <div class="aboutus">
     <div class="overlay">
       <h1 style="text-align: center;">
-      <a href="Pages/aboutus.html" style="text-decoration: none; color: inherit;">About Us</a>
+      <a href="Pages/aboutus.html">About Us</a>
     </h1>
         <p>
         We are committed to providing eco-friendly, sustainable products that make a difference.
@@ -113,37 +113,41 @@
     </div>
   </div>
 
-    <h1 style="text-align: center;"> Our Top selling products</h1>
+    <h1> Our Top selling products</h1>
     <section class="products">
-      <div id="img"></div>
+      <div id="img">
+
+      </div>
 
        <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Eco Mart</h3>
-                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+    <br><br><br>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoEthics</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecoethicsnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#">Home</a>
-                    <a href="Pages/products.html">Products</a>
-                    <a href="Pages/blog.html">Blog</a>
-                    <a href="Pages/contact.html">Contact Us</a>
-                </div> 
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
-                    <p><i class="fas fa-phone"></i> 011-98646</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                <hr>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
 </body>
