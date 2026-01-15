@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 <style>
+  .navbar {
+  display: flex;
+  justify-content: space-around; /* evenly spaced links */
+  align-items: center;           /* vertically aligned */
+  background-color: #c2d9d9;
+  padding: 10px;
+  border-radius: 20px;
+}
 
-.products {
-  display: flex;             /* arrange boxes side by side */
-  overflow-x: auto;          /* enable horizontal scroll */
-  gap: 20px;                 /* space between boxes */
-  padding: 20px;
-  scroll-behavior: smooth;   /* smooth scrolling */
+.aboutus {
+  background-image: url('Assets/background.jpg'); /* your background image */
+  background-size: cover;       /* make it cover the whole section */
+  background-position: center;  /* center the image */
+  height: 400px;                /* adjust height as needed */
+  display: flex;
+  align-items: center;          /* vertically center text */
+  justify-content: center;      /* horizontally center text */
+  position: relative;
+  color: white;                 /* text color */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 18px;
+  max-width: 600px;
 }
 
 .Product {
@@ -25,71 +54,119 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.Product img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;         /* crop image nicely */
-  border-radius: 8px;
+#img {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  padding-left: 30px; 
 }
 
-</style>
+#img img {
+  width: 500px;
+  height: 500px;
+  border: 2px solid #000;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
 
+#img img:hover {
+  border: 2px solid red;
+  transform: scale(1.05);
+}
+.label {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.product {
+  text-align: center;
+}
 
-</head>
+</style> </head>
 <body>
-    <link rel="stylesheet" href="./CSS/style.css"> 
-   <nav class="navbar">
+      <link rel="stylesheet" href="../CSS/style.css">
+        <nav class="navbar">
              <div class="logo">
-                <img src="./Assets/logo.png" alt="logo">
+                <img src="Assets/logo.png" alt="Logo">
+
             </div>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>|
-                    <li><a href="#">Blog</a></li>|
-                    <li><a href="./Pages/aboutus.html">About Us</a></li>|
-                    <li><a href="#">Products</a></li>|
-                    <li><a href="#">Contact Page</a></li>|
-                    <li><a href="./Pages/helpsupport.html">Help and Support</a></li>|
-                    <li><a href="./Pages/login.html">Login</a></li>
+                    <li><a href="Pages/blog.html">Blog</a></li>|
+                    <li><a href="Pages/aboutus.html">About Us</a></li>|
+                    <li><a href="Pages/products.html">Products</a></li>|
+                    <li><a href="Pages/contact.html">Contact Page</a></li>|
+                    <li><a href="Pages/helpsupport.html">Help and Support</a></li>|
+                    <li><a href="Pages/login.html">Login</a></li>
                 </ul>
-        </nav>
+        </nav><br> 
 
-    
+   <div class="aboutus">
+    <div class="overlay">
+      <h1 style="text-align: center;">
+      <a href="Pages/aboutus.html" style="text-decoration: none; color: inherit;">About Us</a>
+    </h1>
+        <p>
+        We are committed to providing eco-friendly, sustainable products that make a difference.
+        Our mission is to combine quality with responsibility for a greener future.
+     </p>
+    </div>
+  </div>
+
     <h1 style="text-align: center;"> Our Top selling products</h1>
     <section class="products">
-  <div class="Product">
-     <img class="image" src="./Assets/product1.jpg" alt="Product 1">
-    <h3>Product 1</h3>
-    <p>$29.99</p>
-  </div>
+      <div id="img"></div>
 
-  <div class="Product">
-    <img class="image" src="./Assets/product2.jpg" alt="Product 2">
-    <h3>Product 2</h3>
-    <p>$49.99</p>
-  </div>
+       <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eco Mart</h3>
+                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="Pages/products.html">Products</a>
+                    <a href="Pages/blog.html">Blog</a>
+                    <a href="Pages/contact.html">Contact Us</a>
+                </div> 
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
+                    <p><i class="fas fa-phone"></i> 011-98646</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
+            </div>
+        </div>
+    </footer>
 
-  <div class="Product">
-    <img src="./Assets/product3.jpg" alt="Product 3">
-    <h3>Product 3</h3>
-    <p>$19.99</p>
-  </div>
-
-  <div class="Product">
-    <img class="image" src="./Assets/product4.jpg" alt="Product 4">
-    <h3>Product 4</h3>
-    <p>$39.99</p>
-
-    <div class="Product">
-    <img class="image" src="./Assets/product5.jpg" alt="Product 4">
-    <h3>Product 5</h3>
-    <p>$39.99</p>
-
-    <div class="Product">
-    <img  src="./Assets/product6.jpg" alt="Product 4">
-    <h3>Product 6</h3>
-    <p>$39.99</p>
-  </div>
-</section>
 
 </body>
+<script>
+  var images = ['Assets/product1.jpg','Assets/product2.jpg','Assets/product3.jpg','Assets/product4.jpg','Assets/product5.jpg','Assets/product6.jpg'];
+  var names = ['Bamboo bottle','Bamboo Toothbrush','Tea bag','Eco friendly spoon and fork','Eco plate','Eco comb'];
+  var x=0;  
+  var img=document.getElementById('img')
+  slider();
+  setInterval(slider,3000);
+
+  function slider() {
+  var currentImages = images.slice(x, x + 3); // take 3 images starting from "x"
+  var currentNames = names.slice(x, x + 3);
+
+  // build HTML for those 3 images
+  img.innerHTML = currentImages.map((src, i) => ` <div class="product"><img src="${src}"> <p class="label">${currentNames[i]}</p> </div>`).join('');
+
+  x++; // move forward by 1
+  if (x > images.length - 3) {
+    x = 0; // loop back
+  }
+}
+
+</script>
 </html>
