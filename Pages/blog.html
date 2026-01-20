@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <style>
         .body{
-        display: grid;
-        /* This creates exactly 2 columns of equal width */
-        grid-template-columns: 1fr 1fr; 
-        /* This creates space between the items */
-        gap: 40px; 
-        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        margin-right: 0;
+        width:100%;
+        }
+        .row{
+            display:flex;
+            flex-direction: column;
+            width:50%;
+            
         }
         h2, h1,strong,b{
             color:#273B09;
@@ -35,6 +39,9 @@
         a:hover{
             text-decoration: underline;
         }
+        footer p{
+            color:#e6eede;
+        }
         
     </style>
 </head>
@@ -47,7 +54,7 @@
             </div>
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>|
-                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="#">Blog</a></li>|
                     <li><a href="./aboutus.html">About Us</a></li>|
                     <li><a href="./products.html">Products</a></li>|
                     <li><a href="./contact.html">Contact Page</a></li>|
@@ -55,7 +62,7 @@
                     <li><a href="./login.html">Login</a></li>
                 </ul>
         </nav>
-    <div style="text-align: center; width: 100%; margin: 20px;">
+    <div style="text-align: center; width: 100%; padding:1%;">
     <h1 style="text-align: center;">About Sustainable Technology <img src="../Assets/leaf.png" width="30px" class="leaf1"></h1>
     </div>
 
@@ -244,11 +251,10 @@ The youth of Pokhara are leading campaigns to promote waste management, engaging
 </section>
 </section>
 </section>
-<div style="text-align: center; width: 100%; margin: 20px;">
     <button onclick="goResearch()" style="padding: 10px 20px; cursor: pointer;">
         Learn More About Our Page
-    </button>
-</div>
+    </button><br>
+
         <footer>
             <div class="footer">
                 <div class="footer-content">
