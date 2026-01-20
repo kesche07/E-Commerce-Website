@@ -18,12 +18,15 @@
 
     .products {
         margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 60px; /* Increased gap for a cleaner look */
-        row-gap:50px;
+        display: flex;
+        flex-direction: column;
         padding: 40px;
         max-width: fit-content;
+    }
+    .row{
+        gap:5%;
+        display: flex;
+        flex-direction: row;
     }
     .product{
         text-align: center;
@@ -90,12 +93,13 @@
 
     <!-- PRODUCT GRID -->
     <section class="products">
+        <section class="row">
         <div class="product">
         <div class="product-card">
             <img src="../Assets/product1.jpg"><br>
             <h3>Bamboo Bottle</h3>
         </div><br>
-        <label>Price:$29.99</label>
+        <label>Price: NRS. 3500</label>
         </div>
 
         <div class="product">
@@ -103,7 +107,7 @@
             <img src="../Assets/product2.jpg" ><br>
             <h3>Bamboo Toothbrush</h3>
         </div><br>
-            <label>Price:$49.99</label>
+            <label>Price:NRS.200</label>
         </div>
 
         <div class="product">
@@ -111,23 +115,25 @@
             <img src="../Assets/product3.jpg"><br>
             <h3>Hello Tea</h3>
         </div><br>
-            <label>Price:$49.99</label>
+            <label>Price:NRS.550</label>
         </div>
+        </section>
 
+        <section class="row">
         <div class="product">
         <div class="product-card">
             <img src="../Assets/product4.jpg"><br>
-            <h3>Wooden Utensils</h3>
+            <h3>Wooden Utensils Set</h3>
         </div><br>
-            <label>Price:$49.99</label>
+            <label>Price:NRS. 4500</label>
         </div>
 
         <div class="product">
         <div class="product-card">
             <img src="../Assets/product5.jpg"><br>
-            <h3>Eco plate</h3>
+            <h3>Eco Plate</h3>
         </div><br>
-            <label>Price:$49.99</label>
+            <label>Price:NRS. 400</label>
         </div>
         
         <div class="product">
@@ -135,10 +141,10 @@
             <img src=  "../Assets/product6.jpg"><br>
             <h3>Eco comb</h3>
         </div><br>
-            <label>Price:$49.99</label>
+            <label>Price:NRS. 150</label>
         </div>
 
-        
+     </section>   
     </section>
     <br><br>
     <footer>
