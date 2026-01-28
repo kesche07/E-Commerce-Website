@@ -9,9 +9,20 @@
         <title>Product Page | EcoEthics</title>
         <link rel="stylesheet" href="../CSS/style.css">
     <style>
+        .vessel {
+        display: flex;
+        
+        align-items: stretch;
+    }
+        .category-bar {
+        background-color: white;
+        width: 10%;
+        min-width: 180px;   /* optional: prevents it getting too thin */
+        padding: 20px;
+    }
 
     table {
-        margin:auto;
+       margin: 20px;
     }
     /* PRODUCTS */
     td{
@@ -51,11 +62,15 @@
         border-radius: 8px; /* Slightly rounded corners for the image itself */
         margin-bottom: 15px; /* Space between image and text */
     }
+    .column{
+         margin:auto;
+        display: flex;
+        flex-direction: column;
+    }
     #searchbar {
         border-radius: 10px;
-        display: block;   
-        margin-right: 20px; /* Gives it a little breathing room from the edge */
-        margin-left: auto; /*move search bar to right side of page*/
+        display: block; 
+        margin: 10px 0 0 auto; /* 10px up, makes it automatically on the right*/  
         width: 250px;      
     }
     input[type="search"]{
@@ -66,6 +81,15 @@
         color: #E6EED6;
         padding: 2px;
         border-radius: 3px;
+    }
+    .category {
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .category:hover {
+        background-color: #E6EED6;
+        border-radius: 5px;
     }
     </style>
     
@@ -87,16 +111,27 @@
                     <li><a href="./login.html">Login</a></li>
                 </ul>
         </nav>
-        <br>
-     <input type="search" placeholder="  &#x2315 Search" id="searchbar" onkeyup="searchItems()">
-
-
 
     <!-- PRODUCT GRID -->
+     <div class="vessel">
+     <div class="category-bar">
+        <p class="category" onclick="category('all')">All Products:</p>
+        <hr>
+        <p class="category" onclick="category('health')">Healthcare Products</p>
+        <hr>
+        <p class="category" onclick="category('wellness')">Wellness Items</p>
+        <hr>
+        <p class="category" onclick="category('utilities')">Utilities</p>
+        
+
+     </div>
+     <div class="column">
+        <br>
+        <input type="search" placeholder="  &#x2315 Search" id="searchbar" onkeyup="searchItems()">
      <table>
         <tr>
         <td>
-        <div class="product">
+        <div class="product" data-category="utilities">
         <div class="product-card">
             <img src="../Assets/product1.jpg"><br>
             <h3 class="item-name">Bamboo Bottle</h3>
@@ -105,7 +140,7 @@
         </div>
         </td>
         <td>
-        <div class="product">
+        <div class="product" data-category="health">
         <div class="product-card">
             <img src="../Assets/product2.jpg" ><br>
             <h3 class="item-name">Bamboo Toothbrush</h3>
@@ -115,20 +150,19 @@
         </td>
 
         <td>
-        <div class="product">
+        <div class="product" data-category="wellness">
         <div class="product-card">
             <img src="../Assets/product3.jpg"><br>
             <h3 class="item-name">Hello Tea</h3>
         </div><br>
             <label>Price:NRS.550</label>
         </div>
-        </section>
         </td>
         </tr>
 
         <tr>
         <td>
-        <div class="product">
+        <div class="product" data-category="utilities">
         <div class="product-card">
             <img src="../Assets/product4.jpg"><br>
             <h3 class="item-name">Wooden Utensils Set</h3>
@@ -138,7 +172,7 @@
         </td>
 
         <td>
-        <div class="product">
+        <div class="product" data-category="utilities">
         <div class="product-card">
             <img src="../Assets/product5.jpg"><br>
             <h3 class="item-name">Eco Plate</h3>
@@ -148,7 +182,7 @@
         </td>
         
         <td>
-        <div class="product">
+        <div class="product" data-category="health">
         <div class="product-card">
             <img src=  "../Assets/product6.jpg"><br>
             <h3 class="item-name">Eco comb</h3>
@@ -158,9 +192,10 @@
         </td>
         </tr>
 
-    </table>  
+    </table>
+    </div> 
+    </div> 
 
-    <br><br>
     <footer>
             <div class="footer">
                 <div class="footer-content">
@@ -190,6 +225,7 @@
         </footer>
     </body>
     <script>
+
 function searchItems() {
     const input = document.getElementById('searchbar').value.toLowerCase();
     const titles = document.getElementsByClassName('item-name');
@@ -203,6 +239,21 @@ function searchItems() {
         else {
             titles[i].classList.remove('highlight');
         }
+    }
+}
+function category(category) {
+    const products = document.getElementsByClassName('product');
+    
+
+    for (let i = 0; i < products.length; i++) {
+        const productCategory = products[i].dataset.category;
+        const title = products[i].querySelector('.item-name');
+
+        if (category === 'all' || productCategory === category) {
+    products[i].style.display = "";
+} else {
+    products[i].style.display = "none";
+}
     }
 }
 </script>
