@@ -3,12 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Portfolio">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Pranisha Bhuju">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
+        <meta name="author" content="Your Name">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio | EcoEthics</title>
-        <link rel="stylesheet" href="../CSS/style.css">
+        <title>Portfolio</title>
         <style>
+            /* .content{
+                background-color: #cbeccc;
+            } */
+            body{
+                background-color: #cbeccc;
+            }
 
             h1{
                 color:#273B09;
@@ -17,16 +22,17 @@
                 width:fit-content;
                 max-width: 600px;
                 padding:10px;
-               
                 margin: auto;
+                background-color: #406540;
             }
             /* Profile Card*/
             .profile{
                 display:flex;
                 flex-direction: row;
+                background: #89a789;
             }
             p{
-                color:#273B09;
+                color:#080808;
                 text-align: left;
             }
             .photo img{
@@ -37,52 +43,6 @@
                 width:310px;
                 margin-right: 10px;
             }
-            /* Thumbnail */
-
-            .thumb {
-                width: 100px;
-                height: 60px;
-                transition: transform 0.2s;  
-            }
-            .thumb img{
-                width: 100px;
-                aspect-ratio: 1/ 1;
-                object-fit: cover;
-                transition: transform 0.2s;  
-            }
-            .behind .background{
-                width:100%;
-            }
-            .behind{
-                display:flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 50px ;
-                border-radius: 0;
-                width:100%;
-                background-color:rgba(35, 115, 1, 0.2);
-                padding-bottom: 40px;
-            }
-            .background{
-                
-                max-width: 70%;
-                padding:20px;
-                
-            }
-            .thumb {
-                cursor: pointer;
-                transition: transform 0.2s;
-            }
-            .thumb-row{
-                display:flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            .thumb img:hover {
-            transform: translate(-5px, -5px); /*moves up on hover*/
-            box-shadow: 3px 3px 0px #273B09;
-            transition:0.2s;
-            }
             footer p{
                 color: #e6eed6;
             }
@@ -92,8 +52,104 @@
                 line-height: 1;
                 text-align: center;
             }
+            
+            /* Navigation */
+            .navbar {
+                background-color: #273B09;
+                padding: 15px 20px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .nav-links {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .nav-links li a {
+                color: rgb(181, 236, 164);
+                text-decoration: none;
+                padding: 5px 10px;
+            }
+            
+            .nav-links li a:hover {
+                color: #4CAF50;
+            }
+            
 
+            
+            /* Header */
+            .page-header {
+                text-align: center;
+                padding: 20px;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .page-header h1 {
+                color:#273B09;
+            }
+  
+footer{
+    padding: 10px 0;
+    text-align: center;
+    background-color: #273B09;
+    color:#E6EED6;
+    width:100%;
+    text-align: center;
+    margin-top: auto;
 
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-section{
+    width:20%;
+    margin:10px;
+    text-align:left;
+}
+.footer-section a,p{
+    display: block;
+    margin: 4px 0;
+    line-height: 1;
+}
+.footer-section a{
+    color:#d7dccf;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.footer-section a:hover{
+    text-decoration:underline;
+    opacity: 0.5;       /* changes opacity */
+    transition: opacity 0.3s; /* gives effect when hovered*/
+}
+.footer-bottom{
+    font-size:x-small;
+}
+            
+            /* Contact Info */
+            .contact-info {
+                margin: 20px 0;
+                padding: 15px;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+            }
+            
+            .contact-info p {
+                margin-bottom: 10px;
+                color: #333;
+            }
         </style>
     </head>
     <body>
@@ -101,7 +157,7 @@
              <div class="logo">
                 <img src="../Assets/logo.png" alt="logo">
             </div>
-                <ul class="nav-links">
+                  <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>|
                     <li><a href="./blog.html">Blog</a></li>|
                     <li><a href="./aboutus.html">About Us</a></li>|
@@ -111,66 +167,55 @@
                     <li><a href="./login.html">Login</a></li>
                 </ul>
         </nav>
-        <div style="text-align: center; width: 100%; margin: 20px;">
-            <h1>Meet our team member</h1><img src="../Assets/leaf.png " width="30px" class="leaf1">
+        <div class="content">
+        <div class="page-header">
+            <h1>My Portfolio</h1>
         </div>
         
         <section class="container">
-    <div class="profile" style="display:flex;">
-        <div class="photo">
-            <img src="../Assets/Photos/member2.png" alt="Pranisha Bhuju">
+            <div class="profile">
+                <div class="photo">
+                    <img src="../Assets/Photos/member2.png" alt="Profile Photo">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Pranisha Bhuju</strong><br><br>
+                        
+                        <strong>About Me:</strong><br>
+                      Curious and motivated  <br><br>
+                        
+                        <strong>Education:</strong><br>
+                        <strong>2022 - 2024</strong><br>
+                       Highschool<br>
+                        Sainik Awasiya Mahavidyalaya, Sallaghari Bhaktapur<br><br>
+                         <strong>2025 - on-going</strong><br>
+                    Islington College<br>
+                        
+                        <strong>Technical Skills:</strong><br>
+                        • HTML, CSS, JavaScript<br>
+                      
+                        
+                        <strong>Languages:</strong><br>
+                        • English (Fluent)<br>
+                        • Nepali (Fluent)<br><br>
+                        
+                        <strong>Interests:</strong><br>
+                        • Web Technologies<br>
+                        • User Experience Design<br>
+                        • Digital Innovation<br>
+                        • Creative Problem Solving<br><br>
+                        
+                        <div class="contact-info">
+                            <strong>Contact Information:</strong><br>
+                                  Pranisha.bhuju@gmail.com<br>
+                                 9846733949<br>
+                            
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </section>
         </div>
-        <div class="text">
-            <p>
-                <strong>Pranisha Bhuju</strong><br><br>
-                <strong>Profile:</strong><br>
-                Curious and motivated computing student with a passion for technology and sustainable solutions. Eager to learn and apply programming skills to create meaningful digital experiences.<br><br>
-                
-                <strong>Education:</strong><br>
-                <strong>2022-2023</strong><br>
-                Highschool<br>
-                Sainik Awasiya Mahavidyalaya, Sallaghari Bhaktapur<br>
-                NEB (+2) - Science<br><br>
-                
-                <strong>2025-Onwards</strong><br>
-                BSc (Hons) Computing<br>
-                Islington College<br><br>
-                
-                <strong>Technical Skills:</strong><br>
-                • Programming Languages: C, C++, Java, Python<br>
-                • Web Development: HTML, CSS, JavaScript<br>
-                • Problem Solving & Algorithm Design<br>
-                • Version Control (Git)<br><br>
-                
-                <strong>Projects:</strong><br>
-                • EcoEthics Portfolio Website (Team Project)<br>
-                • Various programming exercises and small applications<br>
-                • Web development prototypes<br><br>
-                
-                <strong>Languages:</strong><br>
-                • Native Nepali<br>
-                • Fluent English<br><br>
-                
-                <strong>Interests:</strong><br>
-                • Sustainable Technology<br>
-                • Web Development<br>
-                • Environmental Conservation<br>
-                • Creative Problem Solving<br><br>
-                
-                <strong>Contact:</strong><br>
-                Email: pranisha.bhuju@gmail.com<br>
-                Location: Kathmandu, Nepal
-            </p>
-        </div>
-    </div>
-</section>
-<section class="behind">
-    <!-- <section class="background">
-        <div class="thumb-row">
-            <div class="thumb" data-index="0"><img src="../Assets/Photos/member2.png" alt="Pranisha Bhuju"></div>
-        </div>
-    </section>
-</section> -->
         <footer>
             <div class="footer">
                 <div class="footer-content">
@@ -192,25 +237,11 @@
                         <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
                     </div>
                 </div>
-                <hr><br>
+                <hr>
                 <div class="footer-bottom">
                     <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
                 </div>
             </div>
         </footer>
     </body>
-    <script>
-    // Since there's only one profile now, the JavaScript is simplified
-    var profile = document.getElementsByClassName("profile")[0];
-    var thumb = document.getElementsByClassName("thumb")[0];
-    
-    // Keep profile visible by default
-    profile.style.display = "flex";
-    
-    // Thumbnail click handler (though there's only one)
-    thumb.onclick = function() {
-        // Just ensure the profile is visible
-        profile.style.display = "flex";
-    };
-</script>
 </html>
