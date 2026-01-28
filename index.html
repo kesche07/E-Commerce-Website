@@ -2,23 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Homepage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Devendra Kandel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home | EcoEthics</title>
 <style>
-  .navbar {
-  display: flex;
-  justify-content: space-around; /* evenly spaced links */
-  align-items: center;           /* vertically aligned */
-  background-color: #c2d9d9;
-  padding: 10px;
-  border-radius: 20px;
-}
-
 .aboutus {
-  background-image: url('Assets/background.jpg'); /* your background image */
-  background-size: cover;       /* make it cover the whole section */
+  background-image: url('Assets/background.jpg'); /* background image */
+  background-size: cover;       /* covers the whole section */
   background-position: center;  /* center the image */
-  height: 400px;                /* adjust height as needed */
+  height: 400px;                
   display: flex;
   align-items: center;          /* vertically center text */
   justify-content: center;      /* horizontally center text */
@@ -46,34 +40,34 @@
 
 #img {
   display: flex;
-  gap: 30px;               /* single spacing between cards */
-  justify-content: center; /* center the group */
-  flex-wrap: wrap;         /* allow wrapping on smaller screens */
-  padding: 0;              /* remove extra margin/padding */
-  margin: 0;               /* no double margin */
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out; /* fade effect */
 }
 
 .product {
-  width: 500px;            /* fixed card width */
+  width: 30%;
+  max-width: 400px;         
   background-color: #f9f9f9;
-  border: 2px solid #007777;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0);
+   transition:0.2s;
 }
 
 .product img {
-  width: 500px;             /* image fills card width */
-  height: 500px;           /* fixed height for consistency */
+  width:90%;
+  aspect-ratio: 1/1;           /* fixed height for consistency */
   object-fit: cover;       /* crop/scale to fit neatly */
-  border: 2px solid #000;
+  border: 0.5px solid #000;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.product img:hover {
-  border: 2px solid red;
-  transform: scale(1.05);
+
+.product:hover {
+  transform: translate(-5px, -5px); /*moves up on hover*/
+    box-shadow: 3px 3px 0px #273B09; 
 }
 
 .label {
@@ -82,88 +76,92 @@
   font-weight: bold;
   color: #333;
 }
-
-.button {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #007acc; /* button color */
-  color: #fff;               /* text color */
-  text-decoration: none;     /* remove underline */
-  border-radius: 4px;        /* rounded corners */
+.products{
+  display:flex;
+  justify-content: center;
+  margin:30px;
+  
 }
-
-.productlink {
-  font-size: 30px;
-  text-align: center;
+.products button{
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #273B09;
+  border-style: inset;
+  border-color: #273B09;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
 }
 
 </style> </head>
 <body>
-      <link rel="stylesheet" href="../CSS/style.css">
-        <nav class="navbar">
+      <link rel="stylesheet" href="CSS/style.css">
+              <nav class="navbar">
              <div class="logo">
-                <img src="Assets/logo.png" alt="Logo">
-
+                <img src="Assets/logo.png" alt="logo">
             </div>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>|
-                    <li><a href="Pages/blog.html">Blog</a></li>|
-                    <li><a href="Pages/aboutus.html">About Us</a></li>|
-                    <li><a href="Pages/products.html">Products</a></li>|
-                    <li><a href="Pages/contact.html">Contact Page</a></li>|
-                    <li><a href="Pages/helpsupport.html">Help and Support</a></li>|
-                    <li><a href="Pages/login.html">Login</a></li>
+                    <li><a href="./Pages/blog.html">Blog</a></li>|
+                    <li><a href="./Pages/aboutus.html">About Us</a></li>|
+                    <li><a href="./Pages/products.html">Products</a></li>|
+                    <li><a href="./Pages/contact.html">Contact Page</a></li>|
+                    <li><a href="./Pages/helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./Pages/login.html">Login</a></li>
                 </ul>
-        </nav><br> 
+        </nav>
+
+ 
 
    <div class="aboutus">
     <div class="overlay">
       <h1 style="text-align: center;">
-      <a href="Pages/aboutus.html" style="text-decoration: none; color: inherit;">About Us</a>
+      <a href="./aboutus.html" style="text-decoration: none; color: inherit;">About Us</a>
     </h1>
         <p>
         We are committed to providing eco-friendly, sustainable products that make a difference.
         Our mission is to combine quality with responsibility for a greener future.
      </p>
     </div>
-  </div>
+  </div><br>
 
-    <h1 style="text-align: center;"> Our Top selling products</h1>
+    <h1 style="text-align: center; display: block; width: 100%;"> Our Top selling products</h1>
     <section class="products">
-      <div id="img"></div> <br> <br>
-
-      <div class="productlink">
-        <a href="Pages/products.html" class="button">View More</a> 
-      </div>
-      
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button><div id="img">
+  </div><button class="next" onclick="plusSlides(1)">&#10095;</button> <br> <br>
+  </section>
 
        <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Eco Mart</h3>
-                    <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoEthics</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="#">Home</a>
+                        <a href="./Pages/products.html">Products</a>
+                        <a href="./Pages/blog.html">Blog</a>
+                        <a href="./Pages/blog.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecoethicsnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#">Home</a>
-                    <a href="Pages/products.html">Products</a>
-                    <a href="Pages/blog.html">Blog</a>
-                    <a href="Pages/contact.html">Contact Us</a>
-                </div> 
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
-                    <p><i class="fas fa-phone"></i> 011-98646</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Eco Mart. All rights reserved. | Designed with ♥ by the Eco Mart Team</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
 </body>
@@ -171,22 +169,37 @@
   var images = ['Assets/product1.jpg','Assets/product2.jpg','Assets/product3.jpg','Assets/product4.jpg','Assets/product5.jpg','Assets/product6.jpg'];
   var names = ['Bamboo bottle','Bamboo Toothbrush','Tea bag','Eco friendly spoon and fork','Eco plate','Eco comb'];
   var x=0;  
-  var img=document.getElementById('img')
-  slider();
-  setInterval(slider,3000);
+  var img=document.getElementById('img');
+ 
+  showProducts();
 
-  function slider() {
-  var currentImages = images.slice(x, x + 3); // take 3 images starting from "x"
-  var currentNames = names.slice(x, x + 3);
+  function showProducts(){
+    var currentImages = images.slice(x,x+3); //takes array of index 0-2
+    var currentNames = names.slice(x,x+3); // takes array of 0-2
 
-  // build HTML for those 3 images
-  img.innerHTML = currentImages.map((src, i) => ` <div class="product"><img src="${src}"> <p class="label">${currentNames[i]}</p> </div>`).join('');
-
-  x++; // move forward by 1
-  if (x > images.length - 3) {
-    x = 0; // loop back
-  }
+    /* inserts image into page, map loops over the three images*/ img.innerHTML = currentImages.map((src, i) => ` 
+    <div class="product">
+      <img src="${src}">
+      <p class="label">${currentNames[i]}</p>
+    </div>
+  `).join(''); //merges into 1 html string
 }
+
+function plusSlides(n) //runs when button is clicked
+{
+  x += n; //updates index position
+
+  
+  if (x < 0) { //makes it show the last image if index is zero, so it goes to 6
+    x = images.length - 3;
+  } 
+  if (x > images.length - 3) { //makes x back to 0
+    x = 0;
+  }
+
+  showProducts(); //calls function to display new img
+}
+  
 
 </script>
 </html>
