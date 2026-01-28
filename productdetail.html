@@ -70,6 +70,58 @@
     input[type="search"]{
         text-align: left;
     }
+
+
+  .container{
+    background:#c7dbb0;
+    margin:40px;
+    padding:40px;
+    border-radius:15px;
+}
+
+/* Product Section */
+
+.product{
+    display:flex;
+    gap:40px;
+}
+
+/* Left Side */
+
+.left{
+    width:70%;
+}
+
+.main-img{
+    width:100%;
+    height:280px;
+    border:2px solid #444;
+    background:white;
+}
+
+
+
+/* Right Side */
+
+.right{
+    background:#e2ecd3;
+    padding:25px;
+    width:50%;
+}
+
+
+
+
+
+
+.qty{
+    margin-top:15px;
+}
+
+button{
+    padding:6px 15px;
+    cursor:pointer;
+}
     </style>
     
     </head>
@@ -95,113 +147,64 @@
 
 
 
-    <!-- PRODUCT GRID -->
-    <section class="products">
-        <section class="row">
-        <div class="product">
-        <div class="product-card">
-            <img src="../Assets/product1.jpg"><br>
-            <h3>Bamboo Bottle</h3>
-        </div><br>
-        <label>Price: NRS. 3500</label>
+<!-- Product -->
+
+<div class="container">
+
+<div class="product">
+
+    <!-- Left -->
+
+    <div class="left">
+
+         <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\611123027_2435303250240284_7698944088485131725_n.jpg" ><br>
+</div>
+    </div>
+
+    <!-- Right -->
+
+    <div class="right">
+
+        <h2>Bamboo Bottle</h2>
+<br>
+        <h3><b>
+        This bottle is hand made eco-friendly bottle made by using organic strong bamboo from China. This bottle is very relaiable and keeps your drinks clean and fresh. It is a also very duriable and strong with stainless steel cap and inner body. It can store drinks upto 300 degree celcius to -30 degree celcius. It is light weighted and very portable. It is a stylist day to day eco-friendly product made by natural material bottle with a very suitable price.
+       </h3> </p>
+<br>
+        <div class="price">
+            <span class="old"><b>Price:</b>NRs. 3500</span>
+        </div>
+<br>
+        <div class="qty">
+            Amount:
+            <input type="number" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button>Buy Now</button>
         </div>
 
-        <div class="product">
-        <div class="product-card">
-            <img src="../Assets/product2.jpg" ><br>
-            <h3>Bamboo Toothbrush</h3>
-        </div><br>
-            <label>Price:NRS.200</label>
-        </div>
+    </div>
 
-        <div class="product">
-        <div class="product-card">
-            <img src="../Assets/product3.jpg"><br>
-            <h3>Hello Tea</h3>
-        </div><br>
-            <label>Price:NRS.550</label>
-        </div>
-        </section>
+</div>
 
-        <section class="row">
-        <div class="product">
-        <div class="product-card">
-            <img src="../Assets/product4.jpg"><br>
-            <h3>Wooden Utensils Set</h3>
-        </div><br>
-            <label>Price:NRS. 4500</label>
-        </div>
+</div>
 
-        <div class="product">
-        <div class="product-card">
-            <img src="../Assets/product5.jpg"><br>
-            <h3>Eco Plate</h3>
-        </div><br>
-            <label>Price:NRS. 400</label>
-        </div>
-        
-        <div class="product">
-        <div class="product-card">
-            <img src=  "../Assets/product6.jpg"><br>
-            <h3>Eco comb</h3>
-        </div><br>
-            <label>Price:NRS. 150</label>
-        </div>
-    </section>
-        
-        <section class="row">
-        <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\92015f4b3999d1a4f6c6b9bde6e4642e.jpg"><br>
-            <h3>Eco bag</h3>
-        </div><br>
-            <label>Price:NRS. 850</label>
-        </div>
 
-         <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\9e3958e464cf8214ee6bab5a4fa579a8.jpg"><br>
-            <h3>Eco socks </h3>
-        </div><br>
-            <label>Price:NRS. 100</label>
-        </div>
 
-         <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\4b48710fa385698afa2d6115507349f0.jpg"><br>
-            <h3>Eco bodywash </h3>
-        </div><br>
-            <label>Price:NRS. 1200</label>
-        </div>
- </section>
 
-         <section class="row">
-         <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\061aa3bfe4d6e052fa9aea1cd3ab1ec3.jpg"><br>
-            <h3>Eco soap</h3>
-        </div><br>
-            <label>Price:NRS. 200</label>
-        </div>
 
-          <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\c28bd126c063572c382894635ba46f16.jpg"><br>
-            <h3>Eco notebbok</h3>
-        </div><br>
-            <label>Price:NRS. 600</label>
-        </div>
 
-           <div class="product">
-        <div class="product-card">
-            <img src="C:\Users\Jasmine Shrestha\OneDrive\Pictures\9c493e2714eb79c9b0a2dc6d202bfcb8.jpg"><br>
-            <h3>Eco hairties</h3>
-        </div><br>
-            <label>Price:NRS. 200</label>
-        </div>
-     </section>   
-    </section>
-    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+ <br><br>
     <footer>
             <div class="footer">
                 <div class="footer-content">
