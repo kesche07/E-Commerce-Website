@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Pranisha Bhuju">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | EcoEthics</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <style>
+
+            h1{
+                color:#273B09;
+            }
+            .container{
+                width:fit-content;
+                max-width: 600px;
+                padding:10px;
+               
+                margin: auto;
+            }
+            /* Profile Card*/
+            .profile{
+                display:flex;
+                flex-direction: row;
+            }
+            p{
+                color:#273B09;
+                text-align: left;
+            }
+            .photo img{
+                border-top-left-radius: 13px;
+                border-bottom-left-radius: 13px;
+                aspect-ratio: 3/ 4;
+                object-fit: cover;
+                width:310px;
+                margin-right: 10px;
+            }
+            /* Thumbnail */
+
+            .thumb {
+                width: 100px;
+                height: 60px;
+                transition: transform 0.2s;  
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;
+                transition: transform 0.2s;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                
+                max-width: 70%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;
+            transition:0.2s;
+            }
+            footer p{
+                color: #e6eed6;
+            }
+            .footer-bottom p{
+                display: block;
+                margin: 4px 0;
+                line-height: 1;
+                text-align: center;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+        <div style="text-align: center; width: 100%; margin: 20px;">
+            <h1>Meet our team member</h1><img src="../Assets/leaf.png " width="30px" class="leaf1">
+        </div>
+        
+        <section class="container">
+    <div class="profile" style="display:flex;">
+        <div class="photo">
+            <img src="../Assets/Photos/member2.png" alt="Pranisha Bhuju">
+        </div>
+        <div class="text">
+            <p>
+                <strong>Pranisha Bhuju</strong><br><br>
+                <strong>Profile:</strong><br>
+                Curious and motivated computing student with a passion for technology and sustainable solutions. Eager to learn and apply programming skills to create meaningful digital experiences.<br><br>
+                
+                <strong>Education:</strong><br>
+                <strong>2022-2023</strong><br>
+                Highschool<br>
+                Sainik Awasiya Mahavidyalaya, Sallaghari Bhaktapur<br>
+                NEB (+2) - Science<br><br>
+                
+                <strong>2025-Onwards</strong><br>
+                BSc (Hons) Computing<br>
+                Islington College<br><br>
+                
+                <strong>Technical Skills:</strong><br>
+                • Programming Languages: C, C++, Java, Python<br>
+                • Web Development: HTML, CSS, JavaScript<br>
+                • Problem Solving & Algorithm Design<br>
+                • Version Control (Git)<br><br>
+                
+                <strong>Projects:</strong><br>
+                • EcoEthics Portfolio Website (Team Project)<br>
+                • Various programming exercises and small applications<br>
+                • Web development prototypes<br><br>
+                
+                <strong>Languages:</strong><br>
+                • Native Nepali<br>
+                • Fluent English<br><br>
+                
+                <strong>Interests:</strong><br>
+                • Sustainable Technology<br>
+                • Web Development<br>
+                • Environmental Conservation<br>
+                • Creative Problem Solving<br><br>
+                
+                <strong>Contact:</strong><br>
+                Email: pranisha.bhuju@gmail.com<br>
+                Location: Kathmandu, Nepal
+            </p>
+        </div>
+    </div>
+</section>
+<section class="behind">
+    <!-- <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" data-index="0"><img src="../Assets/Photos/member2.png" alt="Pranisha Bhuju"></div>
+        </div>
+    </section>
+</section> -->
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoEthics</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecoethicsnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+    // Since there's only one profile now, the JavaScript is simplified
+    var profile = document.getElementsByClassName("profile")[0];
+    var thumb = document.getElementsByClassName("thumb")[0];
+    
+    // Keep profile visible by default
+    profile.style.display = "flex";
+    
+    // Thumbnail click handler (though there's only one)
+    thumb.onclick = function() {
+        // Just ensure the profile is visible
+        profile.style.display = "flex";
+    };
+</script>
+</html>
