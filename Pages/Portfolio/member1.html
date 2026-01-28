@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Pranisha Bhuju">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keschella's Portfolio | EcoEthics</title>
+        <link rel="stylesheet" href="../../CSS/style.css">
+        <style>
+
+            h1{
+                color:#273B09;
+            }
+            .container{
+                width:fit-content;
+                max-width: 600px;
+                padding:10px;
+                margin: auto;
+            }
+            /* Profile Card*/
+            .profile{
+                display:flex;
+                flex-direction: row;
+            }
+            p{
+                color:#273B09;
+                text-align: left;
+            }
+            .photo img{
+                border-top-left-radius: 13px;
+                border-bottom-left-radius: 13px;
+                aspect-ratio: 3/ 4; /* forces photo in 3:4 ratio*/
+                object-fit: cover; /*crops photo  */
+                width:310px;
+                margin-right: 10px;
+            }
+            /* Thumbnail */
+
+            .thumb {
+                width: 100px;
+                height: 60px;
+                
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                
+                max-width: 70%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s; /* smooth transition on hover */
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly; /*spaces items evenly */
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;
+            }
+            footer p{
+                color: #e6eed6;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>|
+                    <li><a href="../blog.html">Blog</a></li>|
+                    <li><a href="../aboutus.html">About Us</a></li>|
+                    <li><a href="../products.html">Products</a></li>|
+                    <li><a href="../contact.html">Contact Page</a></li>|
+                    <li><a href="../helpsupport.html">Help and Support</a></li>|
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+        </nav>
+        <div style="text-align: center; width: 100%; margin: 20px;">
+            <h1>Meet our team members</h1><img src="../../Assets/leaf.png " width="30px" class="leaf1">
+        </div>
+        
+        <section class="container">
+    <div class="profile">
+        <div class="photo">
+            <img src="../../Assets/Photos/member1.png" alt="Team Member">
+        </div>
+        <div class="text" >
+            <p >
+                <strong>Keschella Agustin Parajuli</strong><br><br>
+                <strong>Profile:</strong><br>
+                An ambitious and assertive student who strives for perfection.<br>
+                <br>
+                <strong>Education:</strong><br>
+                2023-2024<br>
+Highschool<br>
+Kathmandu World School<br>
+NEB (+2) - Science<br>
+
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, Java<br><br>
+<strong>Languages:</strong><br>
+Nepali<br>
+English<br><br>
+<strong>Contact:</strong>
+Gmail:keschellap@gmail.com
+
+
+            </p>
+        </div>
+    </div>
+    
+    
+    
+    
+</section>
+<section class="behind">
+    <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" data-index="0"><img src="../../Assets/Photos/member2.png"></div>
+            <div class="thumb" data-index="1"><img src="../../Assets/Photos/member3.png"></div>
+            <div class="thumb" data-index="2"><img src="../../Assets/Photos/member4.png"></div>
+            <div class="thumb" data-index="3"><img src="../../Assets/Photos/member5.png"></div>
+        </div>
+    </section>
+</section>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoEthics</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../../index.html">Home</a>
+                        <a href="../products.html">Products</a>
+                        <a href="../blog.html">Blog</a>
+                        <a href="../contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecoethicsnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoEthics. All rights reserved. | Designed with ♥ by the Eco Mart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+    var profiles = document.getElementsByClassName("profile");
+    var thumbs = document.getElementsByClassName("thumb");
+
+    for (var i = 0; i < thumbs.length; i++) {
+        thumbs[i].onclick = function () {
+            var index = this.getAttribute("data-index");
+            window.location.href = "./member" + (Number(index) + 2) + ".html";
+        };
+    }
+    
+</script>
+</html>
